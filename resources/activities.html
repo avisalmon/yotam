@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="פעילויות יצירתיות למשל יותם - רעיונות מגוונים להפעלת התלמידים">
+    <meta name="keywords" content="משל יותם, פעילויות, יצירה, חינוך, משחקים לימודיים">
+    <title>פעילויות יצירתיות - משל יותם</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/rtl.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="../index.html">
+                    <i class="fas fa-tree nav-icon"></i>
+                    <span class="nav-title">משל יותם</span>
+                </a>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        בית
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../blog.html" class="nav-link">
+                        <i class="fas fa-blog"></i>
+                        בלוג
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active">
+                        <i class="fas fa-book"></i>
+                        משאבים
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="lesson-plans.html">מערכי שיעור</a></li>
+                        <li><a href="activities.html" class="active">פעילויות</a></li>
+                        <li><a href="assessment.html">הערכה</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">פעילויות יצירתיות</h1>
+                <p class="hero-subtitle">רעיונות מגוונים ומרתקים להפעלת התלמידים סביב משל יותם</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">25+</span>
+                        <span class="stat-label">פעילויות</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">קטגוריות</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">כל הגילאים</span>
+                        <span class="stat-label">מותאם לכל רמה</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Categories -->
+    <section class="activities-section">
+        <div class="container">
+            <!-- Activity Categories Navigation -->
+            <div class="activity-categories">
+                <button class="category-btn active" data-category="all">
+                    <i class="fas fa-th-large"></i>
+                    כל הפעילויות
+                </button>
+                <button class="category-btn" data-category="creative">
+                    <i class="fas fa-palette"></i>
+                    יצירה ואומנות
+                </button>
+                <button class="category-btn" data-category="drama">
+                    <i class="fas fa-theater-masks"></i>
+                    דרמה ומשחקי תפקידים
+                </button>
+                <button class="category-btn" data-category="games">
+                    <i class="fas fa-gamepad"></i>
+                    משחקים לימודיים
+                </button>
+                <button class="category-btn" data-category="writing">
+                    <i class="fas fa-pen"></i>
+                    כתיבה יצירתית
+                </button>
+                <button class="category-btn" data-category="technology">
+                    <i class="fas fa-laptop"></i>
+                    טכנולוgiה ודיגיטל
+                </button>
+                <button class="category-btn" data-category="group">
+                    <i class="fas fa-users"></i>
+                    פעילויות קבוצתיות
+                </button>
+            </div>
+
+            <!-- Activities Grid -->
+            <div class="activities-grid" id="activitiesGrid">
+                <!-- Creative Activities -->
+                <div class="activity-card" data-category="creative">
+                    <div class="activity-header">
+                        <div class="activity-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3 class="activity-title">גן העצים המדבר</h3>
+                        <div class="activity-meta">
+                            <span class="activity-age">גילאים 6-10</span>
+                            <span class="activity-duration">60 דקות</span>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <p class="activity-description">
+                            יצירת גן תלת-ממדי עם כל העצים מהמשל. כל עץ מקבל "בועת דיבור" עם המילים שלו מהמשל.
+                        </p>
+                        <div class="activity-materials">
+                            <strong>חומרים:</strong> קרטון, צבעים, דבק, מקלות עץ, נייר צבעוני
+                        </div>
+                        <div class="activity-skills">
+                            <strong>כישורים מפותחים:</strong> יצירתיות, זיכרון, הבנת טקסט
+                        </div>
+                    </div>
+                    <div class="activity-footer">
+                        <button class="btn btn-primary" onclick="downloadActivity('garden-creation')">
+                            <i class="fas fa-download"></i>
+                            הורד הנחיות מפורטות
+                        </button>
+                        <div class="activity-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activity-card" data-category="creative">
+                    <div class="activity-header">
+                        <div class="activity-icon">
+                            <i class="fas fa-cut"></i>
+                        </div>
+                        <h3 class="activity-title">תיאטרון צללים - משל יותם</h3>
+                        <div class="activity-meta">
+                            <span class="activity-age">גילאים 8-12</span>
+                            <span class="activity-duration">90 דקות</span>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <p class="activity-description">
+                            יצירת בובות צל של כל הדמויות במשל והפקת הצגת תיאטרון צללים מלאה.
+                        </p>
+                        <div class="activity-materials">
+                            <strong>חומרים:</strong> קרטון שחור, מקלות, מנורה, סדין לבן
+                        </div>
+                        <div class="activity-skills">
+                            <strong>כישורים מפותחים:</strong> עבודת צוות, ביטוי בעל פה, יצירתיות
+                        </div>
+                    </div>
+                    <div class="activity-footer">
+                        <button class="btn btn-primary" onclick="downloadActivity('shadow-theater')">
+                            <i class="fas fa-download"></i>
+                            הורד הנחיות מפורטות
+                        </button>
+                        <div class="activity-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drama Activities -->
+                <div class="activity-card" data-category="drama">
+                    <div class="activity-header">
+                        <div class="activity-icon">
+                            <i class="fas fa-mask"></i>
+                        </div>
+                        <h3 class="activity-title">משפט העצים</h3>
+                        <div class="activity-meta">
+                            <span class="activity-age">גילאים 10-14</span>
+                            <span class="activity-duration">45 דקות</span>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <p class="activity-description">
+                            משחק תפקידים בו התלמידים משמשים כשופטים במשפט בין העצים ובין האטד.
+                        </p>
+                        <div class="activity-materials">
+                            <strong>חומרים:</strong> תחפושות פשוטות, שלטי תפקידים, פטיש שופט
+                        </div>
+                        <div class="activity-skills">
+                            <strong>כישורים מפותחים:</strong> טיעון, חשיבה ביקורתית, דיבור בציבור
+                        </div>
+                    </div>
+                    <div class="activity-footer">
+                        <button class="btn btn-primary" onclick="downloadActivity('trees-trial')">
+                            <i class="fas fa-download"></i>
+                            הורד הנחיות מפורטות
+                        </button>
+                        <div class="activity-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activity-card" data-category="drama">
+                    <div class="activity-header">
+                        <div class="activity-icon">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <h3 class="activity-title">ראיון עם העצים</h3>
+                        <div class="activity-meta">
+                            <span class="activity-age">גילאים 12-16</span>
+                            <span class="activity-duration">30 דקות</span>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <p class="activity-description">
+                            תלמידים מנהלים ראיונות עיתונאיים עם כל עץ מהמשל לאחר "אירוע המלוכה".
+                        </p>
+                        <div class="activity-materials">
+                            <strong>חומרים:</strong> מיקרופון צעצוע, כרטיסי שאלות, מצלמה
+                        </div>
+                        <div class="activity-skills">
+                            <strong>כישורים מפותחים:</strong> שאילת שאלות, הבנת נקודות מבט שונות
+                        </div>
+                    </div>
+                    <div class="activity-footer">
+                        <button class="btn btn-primary" onclick="downloadActivity('tree-interviews')">
+                            <i class="fas fa-download"></i>
+                            הורד הנחיות מפורטות
+                        </button>
+                        <div class="activity-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Games Activities -->
+                <div class="activity-card" data-category="games">
+                    <div class="activity-header">
+                        <div class="activity-icon">
+                            <i class="fas fa-dice"></i>
+                        </div>
+                        <h3 class="activity-title">משחק הזיכרון של העצים</h3>
+                        <div class="activity-meta">
+                            <span class="activity-age">גילאים 6-12</span>
+                            <span class="activity-duration">20 דקות</span>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <p class="activity-description">
+                            משחק קלפי זיכרון בו צריך להתאים בין תמונות העצים למשפטים שלהם מהמשל.
+                        </p>
+                        <div class="activity-materials">
+                            <strong>חומרים:</strong> קלפים מודפסים, שולחן למשחק
+                        </div>
+                        <div class="activity-skills">
+                            <strong>כישורים מפותחים:</strong> זיכרון, ריכוז, זיהוי חזותי
+                        </div>
+                    </div>
+                    <div class="activity-footer">
+                        <button class="btn btn-primary" onclick="downloadActivity('memory-game')">
+                            <i class="fas fa-download"></i>
+                            הורד הנחיות מפורטות
+                        </button>
+                        <div class="activity-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activity-card" data-category="games">
+                    <div class="activity-header">
+                        <div class="activity-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <h3 class="activity-title">פאזל סיפור המשל</h3>
+                        <div class="activity-meta">
+                            <span class="activity-age">גילאים 8-14</span>
+                            <span class="activity-duration">25 דקות</span>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <p class="activity-description">
+                            פאזל מיוחד בו חתיכות הפאזל הן פסוקי המשל, וצריך לסדר אותם בסדר הנכון.
+                        </p>
+                        <div class="activity-materials">
+                            <strong>חומרים:</strong> כרטיסיות עם פסוקים, לוח מגנטי
+                        </div>
+                        <div class="activity-skills">
+                            <strong>כישורים מפותחים:</strong> סדר לוגי, הבנת טקסט, עבודה קבוצתית
+                        </div>
+                    </div>
+                    <div class="activity-footer">
+                        <button class="btn btn-primary" onclick="downloadActivity('story-puzzle')">
+                            <i class="fas fa-download"></i>
+                            הורד הנחיות מפורטות
+                        </button>
+                        <div class="activity-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Writing Activities -->
+                <div class="activity-card" data-category="writing">
+                    <div class="activity-header">
+                        <div class="activity-icon">
+                            <i class="fas fa-feather"></i>
+                        </div>
+                        <h3 class="activity-title">יומן העץ</h3>
+                        <div class="activity-meta">
+                            <span class="activity-age">גילאים 10-16</span>
+                            <span class="activity-duration">40 דקות</span>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <p class="activity-description">
+                            כתיבת יומן מנקודת מבטו של אחד העצים במשל, כולל רגשות ומחשבות על האירועים.
+                        </p>
+                        <div class="activity-materials">
+                            <strong>חומרים:</strong> מחברות, עטים, דפי הנחיה לכתיבה
+                        </div>
+                        <div class="activity-skills">
+                            <strong>כישורים מפותחים:</strong> כתיבה יצירתית, אמפתיה, הבנת דמויות
+                        </div>
+                    </div>
+                    <div class="activity-footer">
+                        <button class="btn btn-primary" onclick="downloadActivity('tree-diary')">
+                            <i class="fas fa-download"></i>
+                            הורד הנחיות מפורטות
+                        </button>
+                        <div class="activity-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activity-card" data-category="writing">
+                    <div class="activity-header">
+                        <div class="activity-icon">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <h3 class="activity-title">עיתון יער שכם</h3>
+                        <div class="activity-meta">
+                            <span class="activity-age">גילאים 12-18</span>
+                            <span class="activity-duration">90 דקות</span>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <p class="activity-description">
+                            יצירת עיתון מלא על אירועי המשל, כולל כתבות, ראיונות, מודעות ואפילו תחזית מזג אוויר.
+                        </p>
+                        <div class="activity-materials">
+                            <strong>חומרים:</strong> מחשבים, מדפסת, נייר A3, תוכנת עיצוב
+                        </div>
+                        <div class="activity-skills">
+                            <strong>כישורים מפותחים:</strong> כתיבה עיתונאית, עיצוב, עבודת צוות
+                        </div>
+                    </div>
+                    <div class="activity-footer">
+                        <button class="btn btn-primary" onclick="downloadActivity('forest-newspaper')">
+                            <i class="fas fa-download"></i>
+                            הורד הנחיות מפורטות
+                        </button>
+                        <div class="activity-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technology Activities -->
+                <div class="activity-card" data-category="technology">
+                    <div class="activity-header">
+                        <div class="activity-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3 class="activity-title">סרטון אנימציה</h3>
+                        <div class="activity-meta">
+                            <span class="activity-age">גילאים 12-18</span>
+                            <span class="activity-duration">120 דקות</span>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <p class="activity-description">
+                            יצירת סרטון אנימציה קצר המציג את המשל בצורה מודרנית ויצירתית.
+                        </p>
+                        <div class="activity-materials">
+                            <strong>חומרים:</strong> טאבלטים/מחשבים, אפליקציית אנימציה, מיקרופון
+                        </div>
+                        <div class="activity-skills">
+                            <strong>כישורים מפותחים:</strong> אוריינות דיגיטלית, יצירתיות, סיפור
+                        </div>
+                    </div>
+                    <div class="activity-footer">
+                        <button class="btn btn-primary" onclick="downloadActivity('animation-video')">
+                            <i class="fas fa-download"></i>
+                            הורד הנחיות מפורטות
+                        </button>
+                        <div class="activity-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activity-card" data-category="technology">
+                    <div class="activity-header">
+                        <div class="activity-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3 class="activity-title">משחק מחשב אינטראקטיבי</h3>
+                        <div class="activity-meta">
+                            <span class="activity-age">גילאים 10-16</span>
+                            <span class="activity-duration">60 דקות</span>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <p class="activity-description">
+                            פיתוח משחק פשוט בסקראץ' בו השחקן צריך לעזור לעצים לקבל החלטות נכונות.
+                        </p>
+                        <div class="activity-materials">
+                            <strong>חומרים:</strong> מחשבים עם גישה לסקראץ', הנחיות תכנות
+                        </div>
+                        <div class="activity-skills">
+                            <strong>כישורים מפותחים:</strong> חשיבה חישובית, פתרון בעיות, לוגיקה
+                        </div>
+                    </div>
+                    <div class="activity-footer">
+                        <button class="btn btn-primary" onclick="downloadActivity('scratch-game')">
+                            <i class="fas fa-download"></i>
+                            הורד הנחיות מפורטות
+                        </button>
+                        <div class="activity-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group Activities -->
+                <div class="activity-card" data-category="group">
+                    <div class="activity-header">
+                        <div class="activity-icon">
+                            <i class="fas fa-vote-yea"></i>
+                        </div>
+                        <h3 class="activity-title">בחירות בכפר העצים</h3>
+                        <div class="activity-meta">
+                            <span class="activity-age">גילאים 10-18</span>
+                            <span class="activity-duration">90 דקות</span>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <p class="activity-description">
+                            סימולציה מלאה של בחירות דמוקרטיות בכפר העצים, כולל מועמדים, תעמולה בחירות והצבעה.
+                        </p>
+                        <div class="activity-materials">
+                            <strong>חומרים:</strong> קלפי הצבעה, כרטיסי בחירה, פוסטרים, במה לנאומים
+                        </div>
+                        <div class="activity-skills">
+                            <strong>כישורים מפותחים:</strong> אזרחות, דמוקרטיה, כישורי מנהיגות
+                        </div>
+                    </div>
+                    <div class="activity-footer">
+                        <button class="btn btn-primary" onclick="downloadActivity('village-elections')">
+                            <i class="fas fa-download"></i>
+                            הורד הנחיות מפורטות
+                        </button>
+                        <div class="activity-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activity-card" data-category="group">
+                    <div class="activity-header">
+                        <div class="activity-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 class="activity-title">דיון פרלמנטרי</h3>
+                        <div class="activity-meta">
+                            <span class="activity-age">גילאים 14-18</span>
+                            <span class="activity-duration">60 דקות</span>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <p class="activity-description">
+                            דיון מובנה בנושא: "האם על האנשים הטובים לקחת אחריות מנהיגותית?" בהשראת המשל.
+                        </p>
+                        <div class="activity-materials">
+                            <strong>חומרים:</strong> חוקי דיון, שעון עצר, מקום מסודר לישיבה
+                        </div>
+                        <div class="activity-skills">
+                            <strong>כישורים מפותחים:</strong> ויכוח, הקשבה, ביטוי עמדות
+                        </div>
+                    </div>
+                    <div class="activity-footer">
+                        <button class="btn btn-primary" onclick="downloadActivity('parliamentary-debate')">
+                            <i class="fas fa-download"></i>
+                            הורד הנחיות מפורטות
+                        </button>
+                        <div class="activity-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity Planning Tools -->
+            <div class="planning-tools">
+                <h2 class="section-title">כלי תכנון לפעילויות</h2>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3>מתכנן שיעורים</h3>
+                        <p>כלי לתכנון סדרת פעילויות המשלבות את המשל עם מקצועות שונים.</p>
+                        <button class="btn btn-primary" onclick="openPlanningTool()">
+                            <i class="fas fa-external-link-alt"></i>
+                            פתח כלי תכנון
+                        </button>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h3>מחלק קבוצות</h3>
+                        <p>כלי אוטומטי לחלוקה הוגנת של תלמידים לקבוצות עבור פעילויות משותפות.</p>
+                        <button class="btn btn-primary" onclick="openGroupDivider()">
+                            <i class="fas fa-random"></i>
+                            חלק קבוצות
+                        </button>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-stopwatch"></i>
+                        </div>
+                        <h3>כלי ניהול זמן</h3>
+                        <p>טיימר חכם המתאים לפעילויות שונות ועוזר לנהל את זמני השיעור.</p>
+                        <button class="btn btn-primary" onclick="openTimeManager()">
+                            <i class="fas fa-clock"></i>
+                            הפעל טיימר
+                        </button>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3>רשימת מטלות</h3>
+                        <p>כלי למעקב אחר התקדמות התלמידים בפעילויות השונות.</p>
+                        <button class="btn btn-primary" onclick="openTaskTracker()">
+                            <i class="fas fa-tasks"></i>
+                            נהל מטלות
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-tree"></i>
+                        <h3>משל יותם</h3>
+                    </div>
+                    <p>אתר מקיף על המשל המקראי החשוב ורלוונטיותו לעולם המודרני</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>ניווט מהיר</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">עמוד הבית</a></li>
+                        <li><a href="../index.html#biblical-text">המשל המקראי</a></li>
+                        <li><a href="../index.html#analysis">פירוש ואנליזה</a></li>
+                        <li><a href="../index.html#contemporary">אקטואליה</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>משאבים</h4>
+                    <ul class="footer-links">
+                        <li><a href="lesson-plans.html">מערכי שיעור</a></li>
+                        <li><a href="activities.html" class="active">פעילויות</a></li>
+                        <li><a href="assessment.html">כלי הערכה</a></li>
+                        <li><a href="../blog.html">בלוג</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 משל יותם. כל הזכויות שמורות.</p>
+                <div class="footer-bottom-links">
+                    <a href="../privacy.html">מדיניות פרטיות</a>
+                    <a href="../terms.html">תנאי שימוש</a>
+                    <a href="../accessibility.html">נגישות</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script>
+        // Category filtering functionality
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active from all buttons
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const category = this.dataset.category;
+                const activities = document.querySelectorAll('.activity-card');
+                
+                activities.forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 100);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Download activity function
+        function downloadActivity(activityId) {
+            alert(`מתחיל הורדה של פעילות: ${activityId}\n\nשים לב: זוהי דמונסטרציה - קובץ אמיתי יהיה זמין בגרסה המלאה.`);
+        }
+
+        // Planning tools functions
+        function openPlanningTool() {
+            alert('פותח כלי תכנון שיעורים...\n\nשים לב: זוהי דמונסטרציה - כלי תכנון מלא יהיה זמין בגרסה המלאה.');
+        }
+
+        function openGroupDivider() {
+            alert('פותח מחלק קבוצות...\n\nשים לב: זוהי דמונסטרציה - כלי חלוקה אוטומטי יהיה זמין בגרסה המלאה.');
+        }
+
+        function openTimeManager() {
+            alert('פותח כלי ניהול זמן...\n\nשים לב: זוהי דמונסטרציה - טיימר חכם יהיה זמין בגרסה המלאה.');
+        }
+
+        function openTaskTracker() {
+            alert('פותח רשימת מטלות...\n\nשים לב: זוהי דמונסטרציה - מערכת מעקב מלאה תהיה זמינה בגרסה המלאה.');
+        }
+
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.activity-card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+    </script>
+</body>
+</html>

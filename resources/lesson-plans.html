@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="מערכי שיעור למשל יותם - חומרי הוראה מקצועיים למורים ומחנכים">
+    <meta name="keywords" content="משל יותם, מערכי שיעור, הוראה, חינוך, מורים">
+    <title>מערכי שיעור - משל יותם</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/rtl.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="../index.html">
+                    <i class="fas fa-tree nav-icon"></i>
+                    <span class="nav-title">משל יותם</span>
+                </a>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        בית
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../blog.html" class="nav-link">
+                        <i class="fas fa-blog"></i>
+                        בלוג
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active">
+                        <i class="fas fa-book"></i>
+                        משאבים
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="lesson-plans.html" class="active">מערכי שיעור</a></li>
+                        <li><a href="activities.html">פעילויות</a></li>
+                        <li><a href="assessment.html">הערכה</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">מערכי שיעור</h1>
+                <p class="hero-subtitle">חומרי הוראה מקצועיים להעברת משל יותם בכיתה</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">מערכי שיעור</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">רמות גיל</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">פעילויות</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lesson Plans Section -->
+    <section class="lesson-plans-section">
+        <div class="container">
+            <!-- Grade Level Tabs -->
+            <div class="grade-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-grade="elementary">
+                        <i class="fas fa-child"></i>
+                        יסודי (כיתות א'-ו')
+                    </button>
+                    <button class="tab-btn" data-grade="middle">
+                        <i class="fas fa-user-graduate"></i>
+                        חטיבת ביניים (כיתות ז'-ט')
+                    </button>
+                    <button class="tab-btn" data-grade="high">
+                        <i class="fas fa-graduation-cap"></i>
+                        תיכון (כיתות י'-י"ב)
+                    </button>
+                </div>
+
+                <!-- Elementary Level -->
+                <div class="tab-content active" id="elementary">
+                    <div class="lesson-plans-grid">
+                        <div class="lesson-plan-card">
+                            <div class="lesson-header">
+                                <h3 class="lesson-title">היכרות עם המשל</h3>
+                                <div class="lesson-meta">
+                                    <span class="lesson-grade">כיתות א'-ג'</span>
+                                    <span class="lesson-duration">45 דקות</span>
+                                </div>
+                            </div>
+                            <div class="lesson-content">
+                                <div class="lesson-objectives">
+                                    <h4>מטרות השיעור:</h4>
+                                    <ul>
+                                        <li>להכיר את דמויות העצים במשל</li>
+                                        <li>להבין את המושג "משל" בצורה פשוטה</li>
+                                        <li>לזהות עצים שונים ותכונותיהם</li>
+                                    </ul>
+                                </div>
+                                <div class="lesson-activities">
+                                    <h4>פעילויות מרכזיות:</h4>
+                                    <ul>
+                                        <li>משחק זיהוי עצים</li>
+                                        <li>ציור העצים וההבדלים ביניהם</li>
+                                        <li>שיר על העצים במשל</li>
+                                    </ul>
+                                </div>
+                                <div class="lesson-materials">
+                                    <h4>חומרים נדרשים:</h4>
+                                    <ul>
+                                        <li>תמונות של עצים</li>
+                                        <li>דפי צביעה</li>
+                                        <li>כרטיסיות משחק</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="lesson-footer">
+                                <button class="btn btn-primary" onclick="downloadLesson('elementary-1')">
+                                    <i class="fas fa-download"></i>
+                                    הורד מערך שיעור
+                                </button>
+                                <a href="#preview-elementary-1" class="btn btn-secondary">
+                                    <i class="fas fa-eye"></i>
+                                    תצוגה מקדימה
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="lesson-plan-card">
+                            <div class="lesson-header">
+                                <h3 class="lesson-title">הזית והתאנה - עצים טובים</h3>
+                                <div class="lesson-meta">
+                                    <span class="lesson-grade">כיתות ב'-ד'</span>
+                                    <span class="lesson-duration">60 דקות</span>
+                                </div>
+                            </div>
+                            <div class="lesson-content">
+                                <div class="lesson-objectives">
+                                    <h4>מטרות השיעור:</h4>
+                                    <ul>
+                                        <li>להבין מה עושה עץ "טוב"</li>
+                                        <li>לחבר בין העצים לתכונות אנושיות</li>
+                                        <li>ללמוד על נתינה ותרומה לחברה</li>
+                                    </ul>
+                                </div>
+                                <div class="lesson-activities">
+                                    <h4>פעילויות מרכזיות:</h4>
+                                    <ul>
+                                        <li>סדנת טעימות - שמן זית, דבש תאנים</li>
+                                        <li>יצירת עץ התרומות בכיתה</li>
+                                        <li>משחק תפקידים - עצים מדברים</li>
+                                    </ul>
+                                </div>
+                                <div class="lesson-materials">
+                                    <h4>חומרים נדרשים:</h4>
+                                    <ul>
+                                        <li>דגימות מוצרים מהעצים</li>
+                                        <li>נייר עץ גדול לקיר</li>
+                                        <li>כרטיסיות "תרומות"</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="lesson-footer">
+                                <button class="btn btn-primary" onclick="downloadLesson('elementary-2')">
+                                    <i class="fas fa-download"></i>
+                                    הורד מערך שיעור
+                                </button>
+                                <a href="#preview-elementary-2" class="btn btn-secondary">
+                                    <i class="fas fa-eye"></i>
+                                    תצוגה מקדימה
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="lesson-plan-card">
+                            <div class="lesson-header">
+                                <h3 class="lesson-title">האטד הרע - לקח על מנהיגות</h3>
+                                <div class="lesson-meta">
+                                    <span class="lesson-grade">כיתות ד'-ו'</span>
+                                    <span class="lesson-duration">45 דקות</span>
+                                </div>
+                            </div>
+                            <div class="lesson-content">
+                                <div class="lesson-objectives">
+                                    <h4>מטרות השיעור:</h4>
+                                    <ul>
+                                        <li>להבין את הבעיה באטד כמנהיג</li>
+                                        <li>לדון בתכונות של מנהיג טוב ורע</li>
+                                        <li>ליישם את הלקח בחיי היומיום</li>
+                                    </ul>
+                                </div>
+                                <div class="lesson-activities">
+                                    <h4>פעילויות מרכזיות:</h4>
+                                    <ul>
+                                        <li>דיון בכיתה על מנהיגות</li>
+                                        <li>כתיבת רשימת תכונות מנהיג טוב</li>
+                                        <li>משחק "בחירות בכיתה"</li>
+                                    </ul>
+                                </div>
+                                <div class="lesson-materials">
+                                    <h4>חומרים נדרשים:</h4>
+                                    <ul>
+                                        <li>לוח או מחשב לרשימות</li>
+                                        <li>כרטיסי הצבעה</li>
+                                        <li>תמונות מנהיגים טובים ורעים</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="lesson-footer">
+                                <button class="btn btn-primary" onclick="downloadLesson('elementary-3')">
+                                    <i class="fas fa-download"></i>
+                                    הורד מערך שיעור
+                                </button>
+                                <a href="#preview-elementary-3" class="btn btn-secondary">
+                                    <i class="fas fa-eye"></i>
+                                    תצוגה מקדימה
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="lesson-plan-card">
+                            <div class="lesson-header">
+                                <h3 class="lesson-title">סיכום והפקת לקחים</h3>
+                                <div class="lesson-meta">
+                                    <span class="lesson-grade">כיתות ה'-ו'</span>
+                                    <span class="lesson-duration">90 דקות</span>
+                                </div>
+                            </div>
+                            <div class="lesson-content">
+                                <div class="lesson-objectives">
+                                    <h4>מטרות השיעור:</h4>
+                                    <ul>
+                                        <li>לסכם את כל חלקי המשל</li>
+                                        <li>להפיק לקחים אישיים</li>
+                                        <li>להציג פרויקט סיום על המשל</li>
+                                    </ul>
+                                </div>
+                                <div class="lesson-activities">
+                                    <h4>פעילויות מרכזיות:</h4>
+                                    <ul>
+                                        <li>הצגה של המשל על ידי התלמידים</li>
+                                        <li>כתיבת מסר אישי מהמשל</li>
+                                        <li>יצירת פוסטר על המשל</li>
+                                    </ul>
+                                </div>
+                                <div class="lesson-materials">
+                                    <h4>חומרים נדרשים:</h4>
+                                    <ul>
+                                        <li>חומרים לתחפושות</li>
+                                        <li>נייר ענק וצבעים</li>
+                                        <li>מצלמה להקלטת ההצגה</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="lesson-footer">
+                                <button class="btn btn-primary" onclick="downloadLesson('elementary-4')">
+                                    <i class="fas fa-download"></i>
+                                    הורד מערך שיעור
+                                </button>
+                                <a href="#preview-elementary-4" class="btn btn-secondary">
+                                    <i class="fas fa-eye"></i>
+                                    תצוגה מקדימה
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Middle School Level -->
+                <div class="tab-content" id="middle">
+                    <div class="lesson-plans-grid">
+                        <div class="lesson-plan-card">
+                            <div class="lesson-header">
+                                <h3 class="lesson-title">ההקשר ההיסטורי של המשל</h3>
+                                <div class="lesson-meta">
+                                    <span class="lesson-grade">כיתות ז'-ח'</span>
+                                    <span class="lesson-duration">90 דקות</span>
+                                </div>
+                            </div>
+                            <div class="lesson-content">
+                                <div class="lesson-objectives">
+                                    <h4>מטרות השיעור:</h4>
+                                    <ul>
+                                        <li>להכיר את תקופת השופטים</li>
+                                        <li>להבין את רקע המשל ההיסטורי</li>
+                                        <li>לנתח את דמותו של גדעון ובניו</li>
+                                    </ul>
+                                </div>
+                                <div class="lesson-activities">
+                                    <h4>פעילויות מרכזיות:</h4>
+                                    <ul>
+                                        <li>מחקר על תקופת השופטים</li>
+                                        <li>יצירת ציר זמן אינטראקטיבי</li>
+                                        <li>ניתוח טקסטים מקראיים</li>
+                                    </ul>
+                                </div>
+                                <div class="lesson-materials">
+                                    <h4>חומרים נדרשים:</h4>
+                                    <ul>
+                                        <li>מפות של ארץ ישראל בעת העתיקה</li>
+                                        <li>חומרי מחקר דיגיטליים</li>
+                                        <li>גיליונות לציר זמן</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="lesson-footer">
+                                <button class="btn btn-primary" onclick="downloadLesson('middle-1')">
+                                    <i class="fas fa-download"></i>
+                                    הורד מערך שיעור
+                                </button>
+                                <a href="#preview-middle-1" class="btn btn-secondary">
+                                    <i class="fas fa-eye"></i>
+                                    תצוגה מקדימה
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="lesson-plan-card">
+                            <div class="lesson-header">
+                                <h3 class="lesson-title">סמליות העצים במשל</h3>
+                                <div class="lesson-meta">
+                                    <span class="lesson-grade">כיתות ח'-ט'</span>
+                                    <span class="lesson-duration">60 דקות</span>
+                                </div>
+                            </div>
+                            <div class="lesson-content">
+                                <div class="lesson-objectives">
+                                    <h4>מטרות השיעור:</h4>
+                                    <ul>
+                                        <li>לנתח את הסמליות של כל עץ</li>
+                                        <li>להבין את השימוש בעצים ככלי ספרותי</li>
+                                        <li>להשוות לסמלים בתרבויות אחרות</li>
+                                    </ul>
+                                </div>
+                                <div class="lesson-activities">
+                                    <h4>פעילויות מרכזיות:</h4>
+                                    <ul>
+                                        <li>ניתוח משווה של סמלים</li>
+                                        <li>יצירת מפת מושגים</li>
+                                        <li>כתיבת פרשנות אישית</li>
+                                    </ul>
+                                </div>
+                                <div class="lesson-materials">
+                                    <h4>חומרים נדרשים:</h4>
+                                    <ul>
+                                        <li>טקסטים נוספים על סמליות</li>
+                                        <li>חומרים לבניית מפות מושגים</li>
+                                        <li>מחשבים לכתיבה</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="lesson-footer">
+                                <button class="btn btn-primary" onclick="downloadLesson('middle-2')">
+                                    <i class="fas fa-download"></i>
+                                    הורד מערך שיעור
+                                </button>
+                                <a href="#preview-middle-2" class="btn btn-secondary">
+                                    <i class="fas fa-eye"></i>
+                                    תצוגה מקדימה
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- High School Level -->
+                <div class="tab-content" id="high">
+                    <div class="lesson-plans-grid">
+                        <div class="lesson-plan-card">
+                            <div class="lesson-header">
+                                <h3 class="lesson-title">פרשנויות מתקדמות למשל</h3>
+                                <div class="lesson-meta">
+                                    <span class="lesson-grade">כיתות י'-י"ב</span>
+                                    <span class="lesson-duration">120 דקות</span>
+                                </div>
+                            </div>
+                            <div class="lesson-content">
+                                <div class="lesson-objectives">
+                                    <h4>מטרות השיעור:</h4>
+                                    <ul>
+                                        <li>ללמוד פרשנויות של מפרשים שונים</li>
+                                        <li>לפתח כישורי ניתוח טקסט מתקדמים</li>
+                                        <li>להבין גישות פרשניות שונות</li>
+                                    </ul>
+                                </div>
+                                <div class="lesson-activities">
+                                    <h4>פעילויות מרכזיות:</h4>
+                                    <ul>
+                                        <li>השוואת פרשנויות של רש"י, רד"ק ומפרשים מודרניים</li>
+                                        <li>כתיבת חיבור פרשני</li>
+                                        <li>דיון קבוצתי מובנה</li>
+                                    </ul>
+                                </div>
+                                <div class="lesson-materials">
+                                    <h4>חומרים נדרשים:</h4>
+                                    <ul>
+                                        <li>אוסף פרשנויות</li>
+                                        <li>מקורות דיגיטליים</li>
+                                        <li>הנחיות לכתיבה אקדמית</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="lesson-footer">
+                                <button class="btn btn-primary" onclick="downloadLesson('high-1')">
+                                    <i class="fas fa-download"></i>
+                                    הורד מערך שיעור
+                                </button>
+                                <a href="#preview-high-1" class="btn btn-secondary">
+                                    <i class="fas fa-eye"></i>
+                                    תצוגה מקדימה
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="lesson-plan-card">
+                            <div class="lesson-header">
+                                <h3 class="lesson-title">המשל והפוליטיקה המעשית</h3>
+                                <div class="lesson-meta">
+                                    <span class="lesson-grade">כיתות י"א-י"ב</span>
+                                    <span class="lesson-duration">90 דקות</span>
+                                </div>
+                            </div>
+                            <div class="lesson-content">
+                                <div class="lesson-objectives">
+                                    <h4>מטרות השיעור:</h4>
+                                    <ul>
+                                        <li>לנתח את הרלוונטיות הפוליטית של המשל</li>
+                                        <li>להבין מנגנוני כוח ומנהיגות</li>
+                                        <li>לפתח חשיבה פוליטית ביקורתית</li>
+                                    </ul>
+                                </div>
+                                <div class="lesson-activities">
+                                    <h4>פעילויות מרכזיות:</h4>
+                                    <ul>
+                                        <li>סימולציה של בחירות</li>
+                                        <li>ניתוח מקרים עכשוויים</li>
+                                        <li>דיון פרלמנטרי</li>
+                                    </ul>
+                                </div>
+                                <div class="lesson-materials">
+                                    <h4>חומרים נדרשים:</h4>
+                                    <ul>
+                                        <li>דוגמאות פוליטיות עכשוויות</li>
+                                        <li>חוקי הדיון הפרלמנטרי</li>
+                                        <li>משאבי מחקר פוליטיים</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="lesson-footer">
+                                <button class="btn btn-primary" onclick="downloadLesson('high-2')">
+                                    <i class="fas fa-download"></i>
+                                    הורד מערך שיעור
+                                </button>
+                                <a href="#preview-high-2" class="btn btn-secondary">
+                                    <i class="fas fa-eye"></i>
+                                    תצוגה מקדימה
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Resources -->
+            <div class="additional-resources">
+                <h2 class="section-title">משאבים נוספים למורים</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3>מדריך למורה</h3>
+                        <p>הנחיות מפורטות להוראת המשל, טיפים פדגוגיים ודרכי הערכה.</p>
+                        <button class="btn btn-primary" onclick="downloadResource('teacher-guide')">
+                            <i class="fas fa-download"></i>
+                            הורד מדריך
+                        </button>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-images"></i>
+                        </div>
+                        <h3>חבילת תמונות</h3>
+                        <p>תמונות איכותיות של עצים, נופים מהמקרא וחומרי איור נוספים.</p>
+                        <button class="btn btn-primary" onclick="downloadResource('image-pack')">
+                            <i class="fas fa-download"></i>
+                            הורד תמונות
+                        </button>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>סרטונים לימודיים</h3>
+                        <p>קולקציה של סרטונים קצרים להמחשה ולהעשרת השיעור.</p>
+                        <button class="btn btn-primary" onclick="openVideoLibrary()">
+                            <i class="fas fa-play"></i>
+                            צפה בסרטונים
+                        </button>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h3>דפי עבודה</h3>
+                        <p>דפי עבודה מוכנים לתלמידים בכל הרמות, כולל מפתחות תשובות.</p>
+                        <button class="btn btn-primary" onclick="downloadResource('worksheets')">
+                            <i class="fas fa-download"></i>
+                            הורד דפי עבודה
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-tree"></i>
+                        <h3>משל יותם</h3>
+                    </div>
+                    <p>אתר מקיף על המשל המקראי החשוב ורלוונטיותו לעולם המודרני</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>ניווט מהיר</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">עמוד הבית</a></li>
+                        <li><a href="../index.html#biblical-text">המשל המקראי</a></li>
+                        <li><a href="../index.html#analysis">פירוש ואנליזה</a></li>
+                        <li><a href="../index.html#contemporary">אקטואליה</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>משאבים</h4>
+                    <ul class="footer-links">
+                        <li><a href="lesson-plans.html" class="active">מערכי שיעור</a></li>
+                        <li><a href="activities.html">פעילויות</a></li>
+                        <li><a href="assessment.html">כלי הערכה</a></li>
+                        <li><a href="../blog.html">בלוג</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 משל יותם. כל הזכויות שמורות.</p>
+                <div class="footer-bottom-links">
+                    <a href="../privacy.html">מדיניות פרטיות</a>
+                    <a href="../terms.html">תנאי שימוש</a>
+                    <a href="../accessibility.html">נגישות</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script>
+        // Grade level tabs functionality
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active from all buttons and content
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active to clicked button and corresponding content
+                this.classList.add('active');
+                const grade = this.dataset.grade;
+                document.getElementById(grade).classList.add('active');
+            });
+        });
+
+        // Download functions
+        function downloadLesson(lessonId) {
+            alert(`מתחיל הורדה של מערך שיעור: ${lessonId}\n\nשים לב: זוהי דמונסטרציה - קובץ אמיתי יהיה זמין בגרסה המלאה.`);
+        }
+
+        function downloadResource(resourceType) {
+            alert(`מתחיל הורדה של משאב: ${resourceType}\n\nשים לב: זוהי דמונסטרציה - קובץ אמיתי יהיה זמין בגרסה המלאה.`);
+        }
+
+        function openVideoLibrary() {
+            alert('פותח ספריית וידאו...\n\nשים לב: זוהי דמונסטרציה - ספריית וידאו מלאה תהיה זמינה בגרסה המלאה.');
+        }
+    </script>
+</body>
+</html>

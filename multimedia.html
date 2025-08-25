@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="גלריית מולטימדיה של משל יותם - תמונות, וידאו, מפות ואיורים היסטוריים">
+    <meta name="keywords" content="משל יותם, גלריה, מולטימדיה, תמונות, וידאו, מפות, איורים">
+    <meta property="og:title" content="גלריית מולטימדיה - משל יותם">
+    <meta property="og:description" content="אוסף עשיר של תמונות, וידאוים ותכנים חזותיים למשל יותם">
+    <meta property="og:type" content="website">
+    
+    <title>גלריית מולטימדיה - משל יותם</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/rtl.css">
+    <link rel="stylesheet" href="styles/multimedia.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <i class="fas fa-tree nav-icon"></i>
+                    <span class="nav-title">משל יותם</span>
+                </a>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        בית
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">
+                        <i class="fas fa-blog"></i>
+                        בלוג
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="multimedia.html" class="nav-link active">
+                        <i class="fas fa-photo-video"></i>
+                        מולטימדיה
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="resources/lesson-plans.html" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        למורים
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="search.html" class="nav-link">
+                        <i class="fas fa-search"></i>
+                        חיפוש
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-hero multimedia-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <i class="fas fa-photo-video"></i>
+                    גלריית מולטימדיה
+                </h1>
+                <p class="hero-subtitle">
+                    חקור את משל יותם דרך תמונות, וידאוים, מפות ואיורים היסטוריים
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">תמונות</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">סרטונים</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">מפות</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">איורים</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Navigation -->
+    <section class="multimedia-filters">
+        <div class="container">
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-category="all">
+                    <i class="fas fa-th-large"></i>
+                    הכל
+                </button>
+                <button class="filter-btn" data-category="images">
+                    <i class="fas fa-image"></i>
+                    תמונות
+                </button>
+                <button class="filter-btn" data-category="videos">
+                    <i class="fas fa-video"></i>
+                    סרטונים
+                </button>
+                <button class="filter-btn" data-category="maps">
+                    <i class="fas fa-map"></i>
+                    מפות
+                </button>
+                <button class="filter-btn" data-category="illustrations">
+                    <i class="fas fa-palette"></i>
+                    איורים
+                </button>
+                <button class="filter-btn" data-category="audio">
+                    <i class="fas fa-music"></i>
+                    אודיו
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multimedia Gallery -->
+    <section class="multimedia-gallery">
+        <div class="container">
+            <!-- Featured Video Section -->
+            <div class="featured-section" id="featured-videos">
+                <h2 class="section-title">
+                    <i class="fas fa-star"></i>
+                    סרטונים מומלצים
+                </h2>
+                <div class="featured-grid">
+                    <div class="featured-video">
+                        <div class="video-container">
+                            <div class="video-placeholder" data-video="intro-parable">
+                                <div class="video-poster">
+                                    <img src="https://via.placeholder.com/800x450/8b7d3a/ffffff?text=מבוא+למשל+יותם" alt="מבוא למשל יותם">
+                                    <div class="play-overlay">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h3>מבוא למשל יותם המקראי</h3>
+                                <p>סקירה מקיפה של המשל, הקשרו ההיסטורי ומשמעותו</p>
+                                <div class="video-meta">
+                                    <span class="duration"><i class="fas fa-clock"></i> 12:34</span>
+                                    <span class="views"><i class="fas fa-eye"></i> 1,247 צפיות</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="featured-video">
+                        <div class="video-container">
+                            <div class="video-placeholder" data-video="trees-explained">
+                                <div class="video-poster">
+                                    <img src="https://via.placeholder.com/800x450/6b8e23/ffffff?text=העצים+במשל" alt="העצים במשל">
+                                    <div class="play-overlay">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h3>העצים במשל - סמליות ומשמעות</h3>
+                                <p>הסבר מפורט על כל עץ במשל ומשמעותו הסמלית</p>
+                                <div class="video-meta">
+                                    <span class="duration"><i class="fas fa-clock"></i> 8:45</span>
+                                    <span class="views"><i class="fas fa-eye"></i> 892 צפיות</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="multimedia-grid">
+                <!-- Historical Illustrations -->
+                <div class="gallery-item" data-category="illustrations">
+                    <div class="media-card">
+                        <div class="media-preview">
+                            <img src="https://via.placeholder.com/400x300/daa520/000000?text=איור+עתיק" alt="איור עתיק של המשל">
+                            <div class="media-overlay">
+                                <button class="view-btn" onclick="openMediaModal('illustration-1')">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="media-info">
+                            <h4>איור מימי הביניים</h4>
+                            <p>איור מכתב יד עברי מהמאה ה-13</p>
+                            <span class="media-category">איורים היסטוריים</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nature Photography -->
+                <div class="gallery-item" data-category="images">
+                    <div class="media-card">
+                        <div class="media-preview">
+                            <img src="https://via.placeholder.com/400x300/228b22/ffffff?text=עץ+זית" alt="עץ זית">
+                            <div class="media-overlay">
+                                <button class="view-btn" onclick="openMediaModal('olive-tree')">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="media-info">
+                            <h4>עץ זית עתיק</h4>
+                            <p>עץ זית בן מאות שנים מגליל העליון</p>
+                            <span class="media-category">צילומי טבע</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Historical Maps -->
+                <div class="gallery-item" data-category="maps">
+                    <div class="media-card">
+                        <div class="media-preview">
+                            <img src="https://via.placeholder.com/400x300/4682b4/ffffff?text=מפת+שכם+העתיקה" alt="מפת שכם העתיקה">
+                            <div class="media-overlay">
+                                <button class="view-btn" onclick="openMediaModal('shechem-map')">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="media-info">
+                            <h4>מפת שכם העתיקה</h4>
+                            <p>מפה של אזור שכם בתקופת השופטים</p>
+                            <span class="media-category">מפות היסטוריות</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Content -->
+                <div class="gallery-item" data-category="videos">
+                    <div class="media-card video-card">
+                        <div class="media-preview">
+                            <img src="https://via.placeholder.com/400x300/cd853f/ffffff?text=הרצאה+מומחה" alt="הרצאת מומחה">
+                            <div class="media-overlay">
+                                <div class="play-overlay">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <button class="view-btn" onclick="openMediaModal('expert-lecture')">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="media-info">
+                            <h4>הרצאת מומחה - פרופ' דוד כהן</h4>
+                            <p>פרשנות מודרנית למשל יותם</p>
+                            <div class="video-meta">
+                                <span class="duration"><i class="fas fa-clock"></i> 25:12</span>
+                                <span class="media-category">הרצאות</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modern Art -->
+                <div class="gallery-item" data-category="illustrations">
+                    <div class="media-card">
+                        <div class="media-preview">
+                            <img src="https://via.placeholder.com/400x300/9370db/ffffff?text=אמנות+מודרנית" alt="פרשנות אמנותית מודרנית">
+                            <div class="media-overlay">
+                                <button class="view-btn" onclick="openMediaModal('modern-art')">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="media-info">
+                            <h4>פרשנות אמנותית מודרנית</h4>
+                            <p>יצירה של האמן ישראל דורפמן, 2019</p>
+                            <span class="media-category">אמנות עכשווית</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audio Content -->
+                <div class="gallery-item" data-category="audio">
+                    <div class="media-card audio-card">
+                        <div class="media-preview audio-preview">
+                            <div class="audio-visual">
+                                <i class="fas fa-music"></i>
+                                <div class="sound-waves">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                            </div>
+                            <div class="media-overlay">
+                                <div class="play-overlay">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media-info">
+                            <h4>ניגון מסורתי למשל יותם</h4>
+                            <p>ביצוע מקורי בלחן אשכנזי עתיק</p>
+                            <div class="audio-meta">
+                                <span class="duration"><i class="fas fa-clock"></i> 4:23</span>
+                                <span class="media-category">מוזיקה</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Archaeological Findings -->
+                <div class="gallery-item" data-category="images">
+                    <div class="media-card">
+                        <div class="media-preview">
+                            <img src="https://via.placeholder.com/400x300/d2691e/ffffff?text=ממצא+ארכיאולוגי" alt="ממצא ארכיאולוגי">
+                            <div class="media-overlay">
+                                <button class="view-btn" onclick="openMediaModal('archaeological-find')">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="media-info">
+                            <h4>ממצא ארכיאולוגי מתל שכם</h4>
+                            <p>שרידים מתקופת השופטים</p>
+                            <span class="media-category">ארכיאולוגיה</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Timeline -->
+                <div class="gallery-item" data-category="illustrations">
+                    <div class="media-card interactive-card">
+                        <div class="media-preview">
+                            <img src="https://via.placeholder.com/400x300/ff6347/ffffff?text=ציר+זמן+אינטראקטיבי" alt="ציר זמן אינטראקטיבי">
+                            <div class="media-overlay">
+                                <div class="interactive-badge">
+                                    <i class="fas fa-mouse-pointer"></i>
+                                    אינטראקטיבי
+                                </div>
+                                <button class="view-btn" onclick="openMediaModal('timeline')">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="media-info">
+                            <h4>ציר זמן - מגדעון ליותם</h4>
+                            <p>ציר זמן אינטראקטיבי של האירועים</p>
+                            <span class="media-category">אינפוגרפיקה</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-section">
+                <button class="load-more-btn" onclick="loadMoreMedia()">
+                    <i class="fas fa-plus-circle"></i>
+                    הצג עוד תכנים
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Modal -->
+    <div class="media-modal" id="mediaModal">
+        <div class="modal-backdrop" onclick="closeMediaModal()"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 id="modalTitle">כותרת מדיה</h3>
+                <button class="modal-close" onclick="closeMediaModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content" id="modalContent">
+                <!-- Content will be loaded here -->
+            </div>
+            <div class="modal-footer">
+                <div class="modal-info" id="modalInfo">
+                    <!-- Info will be loaded here -->
+                </div>
+                <div class="modal-actions">
+                    <button class="modal-btn" onclick="downloadMedia()">
+                        <i class="fas fa-download"></i>
+                        הורד
+                    </button>
+                    <button class="modal-btn" onclick="shareMedia()">
+                        <i class="fas fa-share"></i>
+                        שתף
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>משל יותם</h4>
+                    <p>אתר מקיף על המשל המקראי החשוב ורלוונטיותו לעולם המודרני</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>ניווט מהיר</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">עמוד הבית</a></li>
+                        <li><a href="blog.html">בלוג</a></li>
+                        <li><a href="multimedia.html">מולטימדיה</a></li>
+                        <li><a href="search.html">חיפוש</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>משאבים</h4>
+                    <ul class="footer-links">
+                        <li><a href="resources/lesson-plans.html">מערכי שיעור</a></li>
+                        <li><a href="resources/activities.html">פעילויות</a></li>
+                        <li><a href="resources/assessment.html">כלי הערכה</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>מידע</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">מדיניות פרטיות</a></li>
+                        <li><a href="terms.html">תנאי שימוש</a></li>
+                        <li><a href="accessibility.html">הצהרת נגישות</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 משל יותם. כל הזכויות שמורות.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/multimedia.js"></script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Learning Analytics System</title>
+    
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/learning-analytics.css">
+    
+    <style>
+        body {
+            font-family: 'Rubik', Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        .test-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+        
+        .test-section h2 {
+            color: #666;
+            border-bottom: 2px solid #daa520;
+            padding-bottom: 10px;
+        }
+        
+        .test-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .test-btn {
+            padding: 10px 20px;
+            background: #daa520;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .test-btn:hover {
+            background: #b8941b;
+        }
+        
+        .test-btn.success {
+            background: #28a745;
+        }
+        
+        .test-btn.info {
+            background: #17a2b8;
+        }
+        
+        .test-btn.warning {
+            background: #ffc107;
+            color: #212529;
+        }
+        
+        .analytics-demo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #daa520;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .fake-sections {
+            margin-top: 30px;
+        }
+        
+        .fake-section {
+            height: 400px;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        
+        .fake-section:nth-child(1) { background: linear-gradient(135deg, #8b7d3a, #a69154); }
+        .fake-section:nth-child(2) { background: linear-gradient(135deg, #6b8e23, #7a9f2e); }
+        .fake-section:nth-child(3) { background: linear-gradient(135deg, #daa520, #e6b82a); }
+        .fake-section:nth-child(4) { background: linear-gradient(135deg, #4682b4, #5a96c7); }
+        .fake-section:nth-child(5) { background: linear-gradient(135deg, #cd853f, #d89c5a); }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🎯 בדיקת מערכת אנליטיקת למידה</h1>
+        
+        <!-- Analytics Controls -->
+        <div class="test-section">
+            <h2>1. בקרת אנליטיקה</h2>
+            <p>בדוק את הפונקציות הבסיסיות של מערכת האנליטיקה</p>
+            <div class="test-buttons">
+                <button class="test-btn" onclick="testAnalyticsInit()">
+                    🚀 אתחל אנליטיקה
+                </button>
+                <button class="test-btn success" onclick="testShowAnalytics()">
+                    📊 הצג פאנל אנליטיקה
+                </button>
+                <button class="test-btn info" onclick="testRecordInteraction()">
+                    👆 רשום אינטראקציה
+                </button>
+                <button class="test-btn warning" onclick="testAwardAchievement()">
+                    🏆 העניק הישג
+                </button>
+            </div>
+        </div>
+        
+        <!-- Section Tracking -->
+        <div class="test-section">
+            <h2>2. מעקב חלקים</h2>
+            <p>בדוק מעקב הביקורים בחלקים השונים של האתר</p>
+            <div class="test-buttons">
+                <button class="test-btn" onclick="simulateSectionVisit('biblical-text')">
+                    📖 ביקור בטקסט המקראי
+                </button>
+                <button class="test-btn" onclick="simulateSectionVisit('analysis')">
+                    🔍 ביקור באנליזה
+                </button>
+                <button class="test-btn" onclick="simulateSectionVisit('infographics')">
+                    📈 ביקור בתרשימים
+                </button>
+                <button class="test-btn" onclick="simulateSectionVisit('commentary')">
+                    📚 ביקור בפרשנות
+                </button>
+            </div>
+        </div>
+        
+        <!-- Quiz Integration -->
+        <div class="test-section">
+            <h2>3. אינטגרציה עם חידון</h2>
+            <p>בדוק את האינטגרציה עם מערכת החידונים</p>
+            <div class="test-buttons">
+                <button class="test-btn" onclick="simulateQuizStart()">
+                    🎮 התחל חידון מדומה
+                </button>
+                <button class="test-btn success" onclick="simulateQuizComplete(85)">
+                    ✅ סיים חידון (85%)
+                </button>
+                <button class="test-btn warning" onclick="simulateQuizComplete(45)">
+                    ⚠️ סיים חידון (45%)
+                </button>
+            </div>
+        </div>
+        
+        <!-- Time Tracking -->
+        <div class="test-section">
+            <h2>4. מעקב זמן</h2>
+            <p>בדוק את מערכת מעקב הזמן</p>
+            <div class="test-buttons">
+                <button class="test-btn" onclick="addTimeSpent('commentary', 300)">
+                    ⏱️ הוסף זמן פרשנות (5 דק')
+                </button>
+                <button class="test-btn" onclick="addTimeSpent('infographics', 180)">
+                    📊 הוסף זמן תרשימים (3 דק')
+                </button>
+                <button class="test-btn info" onclick="showTimeBreakdown()">
+                    📈 הצג פירוט זמנים
+                </button>
+            </div>
+        </div>
+        
+        <!-- Data Management -->
+        <div class="test-section">
+            <h2>5. ניהול נתונים</h2>
+            <p>בדוק פונקציות ניהול הנתונים</p>
+            <div class="test-buttons">
+                <button class="test-btn info" onclick="exportAnalyticsData()">
+                    📤 ייצא נתונים
+                </button>
+                <button class="test-btn warning" onclick="showAnalyticsData()">
+                    🔍 הצג נתונים גולמיים
+                </button>
+                <button class="test-btn" style="background: #dc3545;" onclick="resetAnalyticsData()">
+                    🗑️ אפס נתונים
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Fake sections for scroll tracking -->
+    <div class="fake-sections">
+        <div class="fake-section" id="biblical-text">
+            קטע טקסט מקראי מדומה
+        </div>
+        <div class="fake-section" id="analysis">
+            קטע אנליזה מדומה
+        </div>
+        <div class="fake-section" id="infographics">
+            קטע תרשימים מדומה
+        </div>
+        <div class="fake-section" id="commentary">
+            קטע פרשנות מדומה
+        </div>
+        <div class="fake-section" id="education">
+            קטע חינוך מדומה
+        </div>
+    </div>
+    
+    <div class="analytics-demo">
+        📊 מערכת אנליטיקה פעילה
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="js/learning-analytics.js"></script>
+    <script>
+        let testAnalytics = null;
+        
+        // Test Functions
+        function testAnalyticsInit() {
+            console.log('🧪 בדיקת אתחול אנליטיקה...');
+            if (window.YotamLearningAnalytics) {
+                testAnalytics = new YotamLearningAnalytics();
+                alert('✅ מערכת אנליטיקה אותחלה בהצלחה!');
+            } else {
+                alert('❌ מערכת אנליטיקה לא נמצאה');
+            }
+        }
+        
+        function testShowAnalytics() {
+            if (window.yotamAnalytics) {
+                window.yotamAnalytics.toggleAnalyticsPanel();
+            } else {
+                alert('יש לאתחל את מערכת האנליטיקה תחילה');
+            }
+        }
+        
+        function testRecordInteraction() {
+            if (window.yotamAnalytics) {
+                window.yotamAnalytics.recordInteraction('test_interaction', {
+                    type: 'manual_test',
+                    value: Math.random()
+                });
+                alert('✅ אינטראקציה נרשמה');
+            } else {
+                alert('יש לאתחל את מערכת האנליטיקה תחילה');
+            }
+        }
+        
+        function testAwardAchievement() {
+            if (window.yotamAnalytics) {
+                const achievement = {
+                    id: 'test_achievement',
+                    name: 'הישג בדיקה',
+                    description: 'הישג שהוענק במהלך בדיקת המערכת',
+                    icon: '🧪'
+                };
+                window.yotamAnalytics.awardAchievement(achievement);
+            } else {
+                alert('יש לאתחל את מערכת האנליטיקה תחילה');
+            }
+        }
+        
+        function simulateSectionVisit(sectionId) {
+            if (window.yotamAnalytics) {
+                window.yotamAnalytics.recordSectionVisit(sectionId);
+                alert(`✅ ביקור ב-${sectionId} נרשם`);
+            } else {
+                alert('יש לאתחל את מערכת האנליטיקה תחילה');
+            }
+        }
+        
+        function simulateQuizStart() {
+            document.dispatchEvent(new CustomEvent('quiz-started', {
+                detail: {
+                    totalQuestions: 10,
+                    timestamp: Date.now()
+                }
+            }));
+            alert('✅ התחלת חידון נרשמה');
+        }
+        
+        function simulateQuizComplete(score) {
+            document.dispatchEvent(new CustomEvent('quiz-completed', {
+                detail: {
+                    score: Math.round(score * 10 / 100),
+                    totalQuestions: 10,
+                    percentage: score,
+                    timestamp: Date.now()
+                }
+            }));
+            alert(`✅ סיום חידון נרשם (${score}%)`);
+        }
+        
+        function addTimeSpent(section, seconds) {
+            if (window.yotamAnalytics) {
+                if (!window.yotamAnalytics.sessionData.timeSpent[section]) {
+                    window.yotamAnalytics.sessionData.timeSpent[section] = 0;
+                }
+                window.yotamAnalytics.sessionData.timeSpent[section] += seconds;
+                window.yotamAnalytics.saveData();
+                alert(`✅ נוספו ${seconds} שניות ל-${section}`);
+            } else {
+                alert('יש לאתחל את מערכת האנליטיקה תחילה');
+            }
+        }
+        
+        function showTimeBreakdown() {
+            if (window.yotamAnalytics) {
+                const timeData = window.yotamAnalytics.sessionData.timeSpent;
+                console.log('פירוט זמנים:', timeData);
+                alert('פירוט הזמנים הודפס לקונסול');
+            } else {
+                alert('יש לאתחל את מערכת האנליטיקה תחילה');
+            }
+        }
+        
+        function exportAnalyticsData() {
+            if (window.yotamAnalytics) {
+                window.yotamAnalytics.exportData();
+            } else {
+                alert('יש לאתחל את מערכת האנליטיקה תחילה');
+            }
+        }
+        
+        function showAnalyticsData() {
+            if (window.yotamAnalytics) {
+                console.log('נתוני אנליטיקה:', {
+                    sessionData: window.yotamAnalytics.sessionData,
+                    learningMetrics: window.yotamAnalytics.learningMetrics
+                });
+                alert('נתוני האנליטיקה הודפסו לקונסול');
+            } else {
+                alert('יש לאתחל את מערכת האנליטיקה תחילה');
+            }
+        }
+        
+        function resetAnalyticsData() {
+            if (window.yotamAnalytics && confirm('האם אתה בטוח שברצונך לאפס את כל הנתונים?')) {
+                window.yotamAnalytics.resetProgress();
+            } else if (!window.yotamAnalytics) {
+                alert('יש לאתחל את מערכת האנליטיקה תחילה');
+            }
+        }
+        
+        // Auto-initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🧪 עמוד בדיקת אנליטיקה נטען');
+            
+            // Wait a moment for analytics to initialize
+            setTimeout(() => {
+                if (window.yotamAnalytics) {
+                    console.log('✅ מערכת אנליטיקה זוהתה אוטומטית');
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,484 @@
+/* RTL CSS - משל יותם */
+/* Hebrew RTL specific styles and corrections */
+
+/* RTL Base Corrections */
+[dir="rtl"] {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] * {
+    direction: rtl;
+}
+
+/* Navigation RTL Fixes */
+[dir="rtl"] .nav-menu {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+[dir="rtl"] .navbar .container {
+    direction: rtl;
+}
+
+[dir="rtl"] .nav-brand {
+    direction: rtl;
+}
+
+/* Button RTL */
+[dir="rtl"] .btn {
+    direction: rtl;
+    text-align: center;
+}
+
+[dir="rtl"] .btn i {
+    margin-left: 0;
+    margin-right: var(--spacing-xs);
+}
+
+/* Flex RTL Corrections */
+[dir="rtl"] .hero-buttons {
+    direction: rtl;
+}
+
+[dir="rtl"] .quick-start-grid {
+    direction: rtl;
+}
+
+[dir="rtl"] .intro-grid {
+    direction: rtl;
+}
+
+/* Text Control RTL */
+[dir="rtl"] .text-controls {
+    direction: rtl;
+}
+
+[dir="rtl"] .btn-control i {
+    margin-left: 0;
+    margin-right: var(--spacing-xs);
+}
+
+/* Verse Container RTL */
+[dir="rtl"] .verse-container {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .verse-number {
+    margin-left: 0;
+    margin-right: var(--spacing-md);
+}
+
+[dir="rtl"] .verse-text {
+    text-align: right;
+    direction: rtl;
+}
+
+/* Trees Display RTL */
+[dir="rtl"] .trees-display {
+    direction: rtl;
+}
+
+[dir="rtl"] .tree-card {
+    direction: rtl;
+    text-align: center;
+}
+
+[dir="rtl"] .tree-details {
+    direction: rtl;
+}
+
+[dir="rtl"] .detail-header {
+    direction: rtl;
+}
+
+[dir="rtl"] .detail-section {
+    direction: rtl;
+}
+
+[dir="rtl"] .detail-section h4 {
+    direction: rtl;
+}
+
+[dir="rtl"] .detail-section h4 i {
+    margin-left: 0;
+    margin-right: var(--spacing-sm);
+}
+
+[dir="rtl"] .detail-section ul {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .detail-section li {
+    direction: rtl;
+    text-align: right;
+    padding-left: 0;
+    padding-right: var(--spacing-md);
+}
+
+[dir="rtl"] .detail-section li::before {
+    left: auto;
+    right: 0;
+}
+
+/* Commentary Grid RTL */
+[dir="rtl"] .commentary-grid {
+    direction: rtl;
+}
+
+[dir="rtl"] .commentary-item {
+    direction: rtl;
+    text-align: right;
+    border-left: 4px solid var(--golden-yellow);
+    border-right: none;
+}
+
+/* Timeline RTL Adjustments */
+[dir="rtl"] .timeline::before {
+    right: 50%;
+    left: auto;
+}
+
+[dir="rtl"] .timeline-item:nth-child(odd) .timeline-content {
+    margin-left: 0;
+    margin-right: calc(50% + 30px);
+    text-align: right;
+}
+
+[dir="rtl"] .timeline-item:nth-child(even) .timeline-content {
+    margin-right: calc(50% + 30px);
+    margin-left: 0;
+    text-align: right;
+}
+
+[dir="rtl"] .timeline-marker {
+    right: 50%;
+    left: auto;
+}
+
+[dir="rtl"] .timeline-content {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .timeline-content blockquote {
+    border-left: 4px solid var(--olive-green);
+    border-right: none;
+    text-align: right;
+    direction: rtl;
+}
+
+/* Contemporary Cards RTL */
+[dir="rtl"] .contemporary-grid {
+    direction: rtl;
+}
+
+[dir="rtl"] .contemporary-card {
+    direction: rtl;
+}
+
+[dir="rtl"] .card-header {
+    direction: rtl;
+}
+
+[dir="rtl"] .example-box {
+    direction: rtl;
+}
+
+[dir="rtl"] .example-box ul {
+    padding-right: var(--spacing-md);
+    padding-left: 0;
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .modern-quote {
+    direction: rtl;
+    text-align: right;
+    border-left: 4px solid var(--golden-yellow);
+    border-right: none;
+}
+
+/* Events RTL */
+[dir="rtl"] .events-list {
+    direction: rtl;
+}
+
+[dir="rtl"] .event-item {
+    direction: rtl;
+}
+
+[dir="rtl"] .event-item:hover {
+    transform: translateX(5px);
+}
+
+[dir="rtl"] .event-content {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Education RTL */
+[dir="rtl"] .education-tabs {
+    direction: rtl;
+}
+
+[dir="rtl"] .education-grid {
+    direction: rtl;
+}
+
+[dir="rtl"] .resource-card {
+    direction: rtl;
+}
+
+[dir="rtl"] .resource-card ul {
+    text-align: right;
+    padding-right: var(--spacing-md);
+    padding-left: 0;
+    direction: rtl;
+}
+
+[dir="rtl"] .teaching-tips {
+    direction: rtl;
+}
+
+[dir="rtl"] .teaching-tips h4 {
+    direction: rtl;
+}
+
+[dir="rtl"] .teaching-tips h4 i {
+    margin-left: 0;
+    margin-right: var(--spacing-sm);
+}
+
+[dir="rtl"] .tips-grid {
+    direction: rtl;
+}
+
+[dir="rtl"] .tip-box {
+    direction: rtl;
+    text-align: right;
+    border-left: 4px solid var(--olive-green);
+    border-right: none;
+}
+
+/* Learning Path RTL */
+[dir="rtl"] .learning-path {
+    direction: rtl;
+}
+
+[dir="rtl"] .step {
+    direction: rtl;
+}
+
+[dir="rtl"] .step:hover {
+    transform: translateX(5px);
+}
+
+[dir="rtl"] .step-content {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Interactive Quiz RTL */
+[dir="rtl"] .interactive-quiz {
+    direction: rtl;
+    text-align: center;
+}
+
+[dir="rtl"] .interactive-quiz h4 {
+    direction: rtl;
+}
+
+[dir="rtl"] .interactive-quiz h4 i {
+    margin-left: 0;
+    margin-right: var(--spacing-sm);
+}
+
+/* Footer RTL */
+[dir="rtl"] .footer {
+    direction: rtl;
+}
+
+[dir="rtl"] .footer-grid {
+    direction: rtl;
+}
+
+[dir="rtl"] .footer-section {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .social-links {
+    direction: rtl;
+    justify-content: flex-start;
+}
+
+[dir="rtl"] .footer-links {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .newsletter-form {
+    direction: rtl;
+}
+
+[dir="rtl"] .footer-bottom {
+    direction: rtl;
+}
+
+[dir="rtl"] .footer-bottom-links {
+    direction: rtl;
+}
+
+/* Section Title RTL */
+[dir="rtl"] .section-title {
+    direction: rtl;
+}
+
+[dir="rtl"] .section-title i {
+    margin-left: var(--spacing-sm);
+    margin-right: 0;
+}
+
+/* Special Hebrew Typography */
+[dir="rtl"] .hebrew-text {
+    font-family: var(--font-heading);
+    line-height: 1.8;
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .biblical-text {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-lg);
+    line-height: 2;
+}
+
+/* Hover Effects RTL Corrections */
+[dir="rtl"] .verse-container:hover {
+    transform: translateX(5px);
+}
+
+[dir="rtl"] .quick-start-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Mobile RTL Adjustments */
+@media (max-width: 768px) {
+    [dir="rtl"] .nav-menu {
+        right: -100%;
+        left: auto;
+    }
+    
+    [dir="rtl"] .nav-menu.active {
+        right: 0;
+        left: auto;
+    }
+    
+    [dir="rtl"] .timeline::before {
+        right: 30px;
+        left: auto;
+    }
+    
+    [dir="rtl"] .timeline-marker {
+        right: 30px;
+        left: auto;
+    }
+    
+    [dir="rtl"] .timeline-item .timeline-content {
+        margin-right: 60px !important;
+        margin-left: 0 !important;
+        text-align: right !important;
+    }
+}
+
+/* Fix for English words in Hebrew text */
+[dir="rtl"] .english-word {
+    direction: ltr;
+    display: inline-block;
+    unicode-bidi: embed;
+}
+
+/* Fix for numbers in Hebrew text */
+[dir="rtl"] .hebrew-number {
+    direction: rtl;
+    unicode-bidi: embed;
+}
+
+/* Special classes for mixed content */
+[dir="rtl"] .mixed-content {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .mixed-content .ltr {
+    direction: ltr;
+    display: inline-block;
+    unicode-bidi: embed;
+}
+
+/* Biblical verse styling improvements */
+[dir="rtl"] .biblical-verse {
+    direction: rtl;
+    text-align: right;
+    font-family: var(--font-heading);
+    font-size: var(--font-size-lg);
+    line-height: 1.8;
+    padding: var(--spacing-md);
+    background: var(--light-beige);
+    border-radius: var(--border-radius);
+    border-right: 4px solid var(--olive-green);
+    margin: var(--spacing-md) 0;
+}
+
+/* Quote styling for Hebrew */
+[dir="rtl"] blockquote {
+    direction: rtl;
+    text-align: right;
+    border-left: none;
+    border-right: 4px solid var(--olive-green);
+    padding-right: var(--spacing-md);
+    padding-left: 0;
+    margin-right: 0;
+    font-style: italic;
+}
+
+/* List styling improvements */
+[dir="rtl"] ul, [dir="rtl"] ol {
+    padding-right: var(--spacing-md);
+    padding-left: 0;
+}
+
+[dir="rtl"] li {
+    text-align: right;
+    direction: rtl;
+}
+
+/* Table RTL support if needed */
+[dir="rtl"] table {
+    direction: rtl;
+}
+
+[dir="rtl"] th, [dir="rtl"] td {
+    text-align: right;
+    direction: rtl;
+}
+
+/* Form elements RTL */
+[dir="rtl"] input, [dir="rtl"] textarea, [dir="rtl"] select {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Scroll behavior for RTL */
+[dir="rtl"] .horizontal-scroll {
+    direction: ltr;
+    transform: scaleX(-1);
+}
+
+[dir="rtl"] .horizontal-scroll > * {
+    transform: scaleX(-1);
+    direction: rtl;
+}

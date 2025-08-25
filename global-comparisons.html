@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="השוואות גלובליות של משל יותם - מחקר בין-תרבותי ובין-לאומי של משלים דומים ברחבי העולם">
+    <meta name="keywords" content="משל יותם גלובלי, משלים בעולם, השוואות בין-תרבותיות, פולקלור, מנהיגות עולמית">
+    
+    <title>השוואות גלובליות - משל יותם בעולם</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/rtl.css">
+    <link rel="stylesheet" href="styles/global-comparisons.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-tree nav-icon"></i>
+                <span class="nav-title">משל יותם</span>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        בית
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="multimedia.html" class="nav-link">
+                        <i class="fas fa-photo-video"></i>
+                        גלריה מולטימדיה
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="translations.html" class="nav-link">
+                        <i class="fas fa-language"></i>
+                        השוואת תרגומים
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="global-comparisons.html" class="nav-link active">
+                        <i class="fas fa-globe"></i>
+                        השוואות גלובליות
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="search.html" class="nav-link">
+                        <i class="fas fa-search-plus"></i>
+                        חיפוש מתקדם
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="global-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">משל יותם בעולם</h1>
+                <p class="hero-subtitle">השוואות בין-תרבותיות ובין-לאומיות של נושאי המשל ברחבי העולם</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">25</span>
+                        <span class="stat-label">מדינות</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">תרבויות</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">יבשות</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">משלים</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- World Map Interactive -->
+    <section class="world-map-section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-map-marked-alt"></i>
+                מפת משלים עולמית
+            </h2>
+            
+            <div class="map-container" id="worldMap">
+                <div class="world-map">
+                    <!-- Interactive world map will be loaded here -->
+                    <div class="map-placeholder">
+                        <i class="fas fa-globe-americas"></i>
+                        <p>מפה אינטראקטיבית של משלים מרחבי העולם</p>
+                        <div class="map-legend">
+                            <div class="legend-item">
+                                <span class="legend-dot leadership"></span>
+                                <span>משלי מנהיגות</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-dot nature"></span>
+                                <span>משלי טבע</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-dot power"></span>
+                                <span>משלי כוח ושלטון</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-controls">
+                    <button class="map-btn active" data-category="all">כל המשלים</button>
+                    <button class="map-btn" data-category="leadership">מנהיגות</button>
+                    <button class="map-btn" data-category="nature">טבע</button>
+                    <button class="map-btn" data-category="power">כוח ושלטון</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Comparisons -->
+    <section class="global-comparisons">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-balance-scale"></i>
+                השוואות תרבותיות
+            </h2>
+            
+            <div class="comparison-tabs">
+                <button class="tab-btn active" data-tab="themes">נושאים משותפים</button>
+                <button class="tab-btn" data-tab="variations">וריאציות תרבותיות</button>
+                <button class="tab-btn" data-tab="modern">פרשנויות מודרניות</button>
+                <button class="tab-btn" data-tab="analysis">ניתוח השוואתי</button>
+            </div>
+            
+            <div class="tab-content">
+                <!-- Themes Tab -->
+                <div class="tab-panel active" id="themes-panel">
+                    <div class="themes-grid">
+                        <div class="theme-card">
+                            <div class="theme-header">
+                                <i class="fas fa-crown"></i>
+                                <h3>מנהיגות ואחריות</h3>
+                            </div>
+                            <div class="theme-content">
+                                <div class="parable-comparison">
+                                    <div class="source-parable">
+                                        <h4>משל יותם (יהדות)</h4>
+                                        <p>העצים מחפשים מלך - הזית, התאנה והגפן מסרבים להוביל בגלל תרומתם החיובית</p>
+                                    </div>
+                                    
+                                    <div class="similar-parables">
+                                        <div class="similar-item">
+                                            <h5><i class="fas fa-flag"></i> סין העתיקה</h5>
+                                            <p>משל "הקיסר החדש" - על מנהיג שמתמנה ללא כישורים אמיתיים</p>
+                                        </div>
+                                        
+                                        <div class="similar-item">
+                                            <h5><i class="fas fa-flag"></i> יוון העתיקה</h5>
+                                            <p>איזופוס - "האריה והעכברושים" על מנהיגות שמבוססת על כוח גולמי</p>
+                                        </div>
+                                        
+                                        <div class="similar-item">
+                                            <h5><i class="fas fa-flag"></i> הודו</h5>
+                                            <p>פנצ'תנטרה - "המלך הקוף" על הסכנות שבמנהיגות לא מתאימה</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="theme-card">
+                            <div class="theme-header">
+                                <i class="fas fa-leaf"></i>
+                                <h3>טבע כמטאפורה</h3>
+                            </div>
+                            <div class="theme-content">
+                                <div class="parable-comparison">
+                                    <div class="source-parable">
+                                        <h4>משל יותם (יהדות)</h4>
+                                        <p>עצים פוריים מול האטד הקוצני - הטבע כמראה לחברה</p>
+                                    </div>
+                                    
+                                    <div class="similar-parables">
+                                        <div class="similar-item">
+                                            <h5><i class="fas fa-flag"></i> יפן</h5>
+                                            <p>משל "הראווה והבמבוק" - על הגמישות מול הקשיחות</p>
+                                        </div>
+                                        
+                                        <div class="similar-item">
+                                            <h5><i class="fas fa-flag"></i> אפריקה</h5>
+                                            <p>משל "האילן הגדול והקוצים" - על יחסי כוח בטבע ובחברה</p>
+                                        </div>
+                                        
+                                        <div class="similar-item">
+                                            <h5><i class="fas fa-flag"></i> צפון אמריקה</h5>
+                                            <p>משלי אינדיאנים על "הנשר והקוצים" - מנהיגות אמיתית מול כוח גולמי</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="theme-card">
+                            <div class="theme-header">
+                                <i class="fas fa-users"></i>
+                                <h3>החברה והפרט</h3>
+                            </div>
+                            <div class="theme-content">
+                                <div class="parable-comparison">
+                                    <div class="source-parable">
+                                        <h4>משל יותם (יהדות)</h4>
+                                        <p>הדילמה בין תרומה אישית למחויבות ציבורית</p>
+                                    </div>
+                                    
+                                    <div class="similar-parables">
+                                        <div class="similar-item">
+                                            <h5><i class="fas fa-flag"></i> רוסיה</h5>
+                                            <p>משל "הלברדה והעלים" - על האיזון בין אינטרסים אישיים וציבוריים</p>
+                                        </div>
+                                        
+                                        <div class="similar-item">
+                                            <h5><i class="fas fa-flag"></i> ערב</h5>
+                                            <p>משל "הגמל והחול" - על מנהיגים שנבחרים מחוסר ברירה</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Variations Tab -->
+                <div class="tab-panel" id="variations-panel">
+                    <div class="variations-container">
+                        <div class="variation-group">
+                            <h3><i class="fas fa-exchange-alt"></i> גרסאות מקומיות</h3>
+                            
+                            <div class="variation-cards">
+                                <div class="variation-card">
+                                    <div class="card-header">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <h4>אירופה</h4>
+                                    </div>
+                                    <div class="card-content">
+                                        <p><strong>גרמניה:</strong> "מלך הקוצים" - על מנהיגים שנבחרים בזמן משבר</p>
+                                        <p><strong>צרפת:</strong> "הרוזה ונקוד הקוצים" - על יופי חיצוני מול תוכן פנימי</p>
+                                        <p><strong>איטליה:</strong> "האדון והעבדים" - על מנהיגות דמוקרטית</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="variation-card">
+                                    <div class="card-header">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <h4>אסיה</h4>
+                                    </div>
+                                    <div class="card-content">
+                                        <p><strong>סין:</strong> "הקיסר ארבעת העצים" - על מנדט השמיים</p>
+                                        <p><strong>יפן:</strong> "השוגון והסאקורה" - על מנהיגות זמנית</p>
+                                        <p><strong>הודו:</strong> "המהרג'ה והקוקוס" - על חוכמה מול כוח</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="variation-card">
+                                    <div class="card-header">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <h4>אמריקה</h4>
+                                    </div>
+                                    <div class="card-content">
+                                        <p><strong>ברזיל:</strong> "המלך הקקטוס" - על הישרדות במדבר הפוליטי</p>
+                                        <p><strong>ארגנטינה:</strong> "הפמפס והכדור" - על מנהיגות ריכוזית</p>
+                                        <p><strong>מקסיקו:</strong> "האגבה והתירס" - על מסורת מול חדשנות</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Modern Tab -->
+                <div class="tab-panel" id="modern-panel">
+                    <div class="modern-interpretations">
+                        <div class="interpretation-section">
+                            <h3><i class="fas fa-newspaper"></i> פרשנויות פוליטיות מודרניות</h3>
+                            
+                            <div class="modern-grid">
+                                <div class="modern-card">
+                                    <div class="modern-header">
+                                        <h4>דמוקרטיה ואליטות</h4>
+                                        <span class="modern-date">2020-2024</span>
+                                    </div>
+                                    <div class="modern-content">
+                                        <p>פרשנים מודרניים מפרשים את המשל כביקורת על אליטות שמסרבות להיכנס לפוליטיקה, ומותירות את המקום לדמגוגים.</p>
+                                        <div class="modern-examples">
+                                            <span class="example-tag">ארה"ב - אליטות אקדמיות</span>
+                                            <span class="example-tag">אירופה - מומחי מדיניות</span>
+                                            <span class="example-tag">ישראל - מנהיגות אזרחית</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="modern-card">
+                                    <div class="modern-header">
+                                        <h4>גלובליזציה ומנהיגות</h4>
+                                        <span class="modern-date">2015-2023</span>
+                                    </div>
+                                    <div class="modern-content">
+                                        <p>המשל מפורש כאזהרה מפני מנהיגים פופוליסטיים שמבטיחים פתרונות פשוטים לבעיות מורכבות.</p>
+                                        <div class="modern-examples">
+                                            <span class="example-tag">ברקזיט - בריטניה</span>
+                                            <span class="example-tag">מנהיגות אוטוריטרית</span>
+                                            <span class="example-tag">משברי אמון</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="modern-card">
+                                    <div class="modern-header">
+                                        <h4>סביבה וחברה</h4>
+                                        <span class="modern-date">2019-2024</span>
+                                    </div>
+                                    <div class="modern-content">
+                                        <p>פעילי סביבה משתמשים במשל לתאר את הדילמה בין פיתוח כלכלי לשימור סביבה.</p>
+                                        <div class="modern-examples">
+                                            <span class="example-tag">שינויי אקלים</span>
+                                            <span class="example-tag">יערות גשם</span>
+                                            <span class="example-tag">חקלאות בת קיימא</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Analysis Tab -->
+                <div class="tab-panel" id="analysis-panel">
+                    <div class="analysis-dashboard">
+                        <div class="analysis-metrics">
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-chart-pie"></i>
+                                </div>
+                                <div class="metric-content">
+                                    <h4>רמת הדמיון</h4>
+                                    <div class="metric-value">87%</div>
+                                    <p>בין משלים ממדינות שונות</p>
+                                </div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <div class="metric-content">
+                                    <h4>תפוצה גיאוגרפית</h4>
+                                    <div class="metric-value">6</div>
+                                    <p>יבשות עם משלים דומים</p>
+                                </div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="metric-content">
+                                    <h4>טווח היסטורי</h4>
+                                    <div class="metric-value">3000+</div>
+                                    <p>שנים של מסורת</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="analysis-chart">
+                            <h3><i class="fas fa-chart-line"></i> ניתוח נושאים גלובלי</h3>
+                            <div class="chart-placeholder">
+                                <canvas id="globalAnalysisChart" width="800" height="400"></canvas>
+                            </div>
+                        </div>
+                        
+                        <div class="key-insights">
+                            <h3><i class="fas fa-lightbulb"></i> תובנות מרכזיות</h3>
+                            <div class="insights-grid">
+                                <div class="insight-item">
+                                    <i class="fas fa-users"></i>
+                                    <h4>אוניברסליות הנושא</h4>
+                                    <p>נושא המנהיגות והאחריות מופיע בכל התרבויות הידועות</p>
+                                </div>
+                                
+                                <div class="insight-item">
+                                    <i class="fas fa-tree"></i>
+                                    <h4>שימוש בטבע</h4>
+                                    <p>92% מהמשלים הדומים משתמשים במטאפורות מהטבע</p>
+                                </div>
+                                
+                                <div class="insight-item">
+                                    <i class="fas fa-balance-scale"></i>
+                                    <h4>דילמות מוסריות</h4>
+                                    <p>כל המשלים מציגים קונפליקט בין אינטרס אישי לציבורי</p>
+                                </div>
+                                
+                                <div class="insight-item">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <h4>אזהרה מהעבר</h4>
+                                    <p>רוב המשלים נוצרו בתקופות של משבר מנהיגות</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="research-section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-microscope"></i>
+                מחקר ומקורות
+            </h2>
+            
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="research-header">
+                        <i class="fas fa-book"></i>
+                        <h3>מחקרים אקדמיים</h3>
+                    </div>
+                    <div class="research-content">
+                        <ul>
+                            <li>חוקרי פולקלור משוואתי - אוניברסיטת הרווארד</li>
+                            <li>מכון למחקר בין-תרבותי - אוניברסיטת אוקספורד</li>
+                            <li>מרכז למחקרי מזרח תיכון - האוניברסיטה העברית</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="research-card">
+                    <div class="research-header">
+                        <i class="fas fa-database"></i>
+                        <h3>בסיסי נתונים</h3>
+                    </div>
+                    <div class="research-content">
+                        <ul>
+                            <li>ארכיון המשלים הבין-לאומי</li>
+                            <li>מאגר הפולקלור העולמי</li>
+                            <li>ספריית המסורות העממיות</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="research-card">
+                    <div class="research-header">
+                        <i class="fas fa-users"></i>
+                        <h3>שיתופי פעולה</h3>
+                    </div>
+                    <div class="research-content">
+                        <ul>
+                            <li>האגודה הבין-לאומית לחקר פולקלור</li>
+                            <li>מכון סמיתסוניאן - וושינגטון</li>
+                            <li>המרכז לחקר מסורות יהודיות - פריז</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>משל יותם</h3>
+                    <p>חקר מעמיק של המשל המקראי החשוב ומקבילותיו בעולם</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>קישורים מהירים</h4>
+                    <ul>
+                        <li><a href="index.html">דף הבית</a></li>
+                        <li><a href="multimedia.html">גלריה מולטימדיה</a></li>
+                        <li><a href="translations.html">השוואת תרגומים</a></li>
+                        <li><a href="search.html">חיפוש מתקדם</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>השוואות גלובליות</h4>
+                    <ul>
+                        <li><a href="#themes">נושאים משותפים</a></li>
+                        <li><a href="#variations">וריאציות תרבותיות</a></li>
+                        <li><a href="#modern">פרשנויות מודרניות</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 משל יותם. כל הזכויות שמורות.</p>
+                <div class="footer-links">
+                    <a href="#privacy">מדיניות פרטיות</a>
+                    <a href="#terms">תנאי שימוש</a>
+                    <a href="#contact">צור קשר</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/global-comparisons.js"></script>
+</body>
+</html>

@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="משל יותם - חקר מעמיק של המשל המקראי החשוב, פרשנויותיו והשלכותיו האקטואליות על מנהיגות ופוליטיקה">
+    <meta name="keywords" content="משל יותם, מקרא, שופטים, יותם בן גדעון, מנהיגות, פוליטיקה, אטד, זית, תאנה, גפן">
+    <meta property="og:title" content="משל יותם - בין המקרא, הפרשנות והאקטואליה">
+    <meta property="og:description" content="אתר מקיף על משל יותם המקראי - מהטקסט העתיק ועד לרלוונטיות העכשווית">
+    <meta property="og:type" content="website">
+    
+    <title>משל יותם - בין המקרא, הפרשנות והאקטואליה</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/rtl.css">
+    <link rel="stylesheet" href="styles/infographics.css">
+    <link rel="stylesheet" href="styles/learning-analytics.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-tree nav-icon"></i>
+                <span class="nav-title">משל יותם</span>
+            </div>
+            
+            <!-- Search Container -->
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="חפש במשל יותם..." 
+                           autocomplete="off" aria-label="חיפוש באתר">
+                    <button type="button" id="search-button" aria-label="חיפוש">
+                        <span class="search-icon">🔍</span>
+                    </button>
+                    <div id="search-suggestions" class="search-suggestions hidden"></div>
+                </div>
+                <div id="search-results" class="search-results hidden"></div>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active">
+                        <i class="fas fa-home"></i>
+                        בית
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#biblical-text" class="nav-link">
+                        <i class="fas fa-scroll"></i>
+                        המשל המקראי
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#analysis" class="nav-link">
+                        <i class="fas fa-search"></i>
+                        פירוש ואנליזה
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#infographics" class="nav-link">
+                        <i class="fas fa-chart-pie"></i>
+                        תרשימים אינטראקטיביים
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#commentary" class="nav-link">
+                        <i class="fas fa-book-open"></i>
+                        פרשנויות
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#principles" class="nav-link">
+                        <i class="fas fa-lightbulb"></i>
+                        מסרים ועקרונות
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contemporary" class="nav-link">
+                        <i class="fas fa-newspaper"></i>
+                        אקטואליה
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#education" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        לימוד והוראה
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="multimedia.html" class="nav-link">
+                        <i class="fas fa-photo-video"></i>
+                        גלריה מולטימדיה
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="translations.html" class="nav-link">
+                        <i class="fas fa-language"></i>
+                        השוואת תרגומים
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="search.html" class="nav-link">
+                        <i class="fas fa-search-plus"></i>
+                        חיפוש מתקדם
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-trees">
+                <div class="tree olive-tree" data-tree="olive">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <div class="tree fig-tree" data-tree="fig">
+                    <i class="fas fa-apple-alt"></i>
+                </div>
+                <div class="tree vine-tree" data-tree="vine">
+                    <i class="fas fa-grape-cluster"></i>
+                </div>
+                <div class="tree bramble-tree" data-tree="bramble">
+                    <i class="fas fa-thorn"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container hero-content">
+            <h1 class="hero-title">משל יותם</h1>
+            <p class="hero-subtitle">בין המקרא, הפרשנות והאקטואליה</p>
+            <div class="hero-quote">
+                <blockquote>
+                    "הָלוֹךְ הָלְכוּ הָעֵצִים לִמְשֹׁחַ עֲלֵיהֶם מֶלֶךְ"
+                </blockquote>
+                <cite>שופטים ט', ח</cite>
+            </div>
+            <div class="hero-buttons">
+                <a href="#biblical-text" class="btn btn-primary">
+                    <i class="fas fa-play"></i>
+                    התחל כאן
+                </a>
+                <a href="#education" class="btn btn-secondary">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    למורים
+                </a>
+                <button onclick="startQuiz()" class="btn btn-accent">
+                    <i class="fas fa-question-circle"></i>
+                    התחל חידון
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="introduction">
+        <div class="container">
+            <div class="intro-grid">
+                <div class="intro-text">
+                    <h2>משל עתיק, מסר נצחי</h2>
+                    <p>משל יותם הוא אחד המשלים המקראיים החשובים והמשפיעים ביותר. נאמר לפני אלפי שנים על הר גריזים, הוא ממשיך לעורר הדים חזקים בעולם המודרני ומציע תובנות עמוקות על טבעם של מנהיגים וחברות.</p>
+                    
+                    <p>המשל מתאר עצים המחפשים מלך - הזית הנכבד, התאנה המתוקה והגפן המשמח מסרבים למלוך, ואילו האטד הקוצני והחסר תועלת קופץ על ההזדמנות. זהו משל על מנהיגות, על הסכנות הטמונות בשלטון של הבלתי ראויים, ועל אחריותנו כציבור.</p>
+                </div>
+                
+                <div class="intro-stats">
+                    <div class="stat-box">
+                        <div class="stat-number">3000+</div>
+                        <div class="stat-label">שנים של פרשנות</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">עצים במשל</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">רלוונטיות</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start Guide -->
+    <section class="quick-start">
+        <div class="container">
+            <h2>איך להתחיל?</h2>
+            <div class="quick-start-grid">
+                <div class="quick-start-card" data-target="#biblical-text">
+                    <div class="card-icon">
+                        <i class="fas fa-scroll"></i>
+                    </div>
+                    <h3>קרא את המשל</h3>
+                    <p>התחל עם הטקסט המקראי המלא, עם הסברים ופירושים מובנים</p>
+                </div>
+                
+                <div class="quick-start-card" data-target="#analysis">
+                    <div class="card-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>הכר את העצים</h3>
+                    <p>גלה את המשמעות של כל עץ במשל ואת הסמליות העמוקה</p>
+                </div>
+                
+                <div class="quick-start-card" data-target="#infographics">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>חקר אינטראקטיבית</h3>
+                    <p>התנסה בתרשימים אינטראקטיביים וגלה מימדים נוספים של המשל</p>
+                </div>
+                
+                <div class="quick-start-card" data-target="#contemporary">
+                    <div class="card-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>ראה בעיני היום</h3>
+                    <p>חקר את הרלוונטיות של המשל לאקטואליה ולחיים המודרניים</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biblical Text Section -->
+    <section id="biblical-text" class="biblical-text">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-scroll"></i>
+                המשל המקראי
+            </h2>
+            
+            <div class="text-controls">
+                <button class="btn-control active" data-version="pointed">מנוקד</button>
+                <button class="btn-control" data-version="unpointed">לא מנוקד</button>
+                <button class="btn-control" id="playAudio">
+                    <i class="fas fa-play"></i>
+                    האזנה
+                </button>
+            </div>
+            
+            <div class="biblical-passage">
+                <div class="verse-container" data-verse="7">
+                    <span class="verse-number">ז</span>
+                    <span class="verse-text pointed">וַיַּגִּדוּ לְיוֹתָם וַיֵּלֶךְ וַיַּעֲמֹד בְּרֹאשׁ הַר גְּרִזִים וַיִּשָּׂא קוֹלוֹ וַיִּקְרָא וַיֹּאמֶר לָהֶם שִׁמְעוּנִי בַעֲלֵי שְׁכֶם וְיִשְׁמַע אֲלֵיכֶם אֱלֹהִים</span>
+                    <span class="verse-text unpointed hidden">ויגדו ליותם וילך ויעמד בראש הר גרזים וישא קולו ויקרא ויאמר להם שמעוני בעלי שכם וישמע אליכם אלהים</span>
+                </div>
+                
+                <div class="verse-container" data-verse="8">
+                    <span class="verse-number">ח</span>
+                    <span class="verse-text pointed">הָלוֹךְ הָלְכוּ הָעֵצִים לִמְשֹׁחַ עֲלֵיהֶם מֶלֶךְ וַיֹּאמְרוּ לַזַּיִת מָלְכָה עָלֵינוּ</span>
+                    <span class="verse-text unpointed hidden">הלוך הלכו העצים למשח עליהם מלך ויאמרו לזית מלכה עלינו</span>
+                </div>
+                
+                <div class="verse-container" data-verse="9">
+                    <span class="verse-number">ט</span>
+                    <span class="verse-text pointed">וַיֹּאמֶר לָהֶם הַזַּיִת הֶחֳדַלְתִּי אֶת דִּשְׁנִי אֲשֶׁר בִּי יְכַבְּדוּ אֱלֹהִים וַאֲנָשִׁים וְהָלַכְתִּי לָנוּעַ עַל הָעֵצִים</span>
+                    <span class="verse-text unpointed hidden">ויאמר להם הזית החדלתי את דשני אשר בי יכבדו אלהים ואנשים והלכתי לנוע על העצים</span>
+                </div>
+                
+                <div class="verse-container" data-verse="10">
+                    <span class="verse-number">י</span>
+                    <span class="verse-text pointed">וַיֹּאמְרוּ הָעֵצִים לַתְּאֵנָה לְכִי אַתְּ מָלְכִי עָלֵינוּ</span>
+                    <span class="verse-text unpointed hidden">ויאמרו העצים לתאנה לכי את מלכי עלינו</span>
+                </div>
+                
+                <div class="verse-container" data-verse="11">
+                    <span class="verse-number">יא</span>
+                    <span class="verse-text pointed">וַתֹּאמֶר לָהֶם הַתְּאֵנָה הֶחֳדַלְתִּי אֶת מָתְקִי וְאֶת תְּנוּבָתִי הַטּוֹבָה וְהָלַכְתִּי לָנוּעַ עַל הָעֵצִים</span>
+                    <span class="verse-text unpointed hidden">ותאמר להם התאנה החדלתי את מתקי ואת תנובתי הטובה והלכתי לנוע על העצים</span>
+                </div>
+                
+                <div class="verse-container" data-verse="12">
+                    <span class="verse-number">יב</span>
+                    <span class="verse-text pointed">וַיֹּאמְרוּ הָעֵצִים לַגֶּפֶן לְכִי אַתְּ מָלְכִי עָלֵינוּ</span>
+                    <span class="verse-text unpointed hidden">ויאמרו העצים לגפן לכי את מלכי עלינו</span>
+                </div>
+                
+                <div class="verse-container" data-verse="13">
+                    <span class="verse-number">יג</span>
+                    <span class="verse-text pointed">וַתֹּאמֶר לָהֶם הַגֶּפֶן הֶחֳדַלְתִּי אֶת תִּירוֹשִׁי הַמְשַׂמֵּחַ אֱלֹהִים וַאֲנָשִׁים וְהָלַכְתִּי לָנוּעַ עַל הָעֵצִים</span>
+                    <span class="verse-text unpointed hidden">ותאמר להם הגפן החדלתי את תירושי המשמח אלהים ואנשים והלכתי לנוע על העצים</span>
+                </div>
+                
+                <div class="verse-container" data-verse="14">
+                    <span class="verse-number">יד</span>
+                    <span class="verse-text pointed">וַיֹּאמְרוּ כָל הָעֵצִים אֶל הָאָטָד לֵךְ אַתָּה מְלָךְ עָלֵינוּ</span>
+                    <span class="verse-text unpointed hidden">ויאמרו כל העצים אל האטד לך אתה מלך עלינו</span>
+                </div>
+                
+                <div class="verse-container" data-verse="15">
+                    <span class="verse-number">טו</span>
+                    <span class="verse-text pointed">וַיֹּאמֶר הָאָטָד אֶל הָעֵצִים אִם בֶּאֱמֶת אַתֶּם מֹשְׁחִים אֹתִי לְמֶלֶךְ עֲלֵיכֶם בֹּאוּ חֲסוּ בְצִלִּי וְאִם אַיִן תֵּצֵא אֵשׁ מִן הָאָטָד וְתֹאכַל אֶת אַרְזֵי הַלְּבָנוֹן</span>
+                    <span class="verse-text unpointed hidden">ויאמר האטד אל העצים אם באמת אתם משחים אתי למלך עליכם באו חסו בצלי ואם אין תצא אש מן האטד ותאכל את ארזי הלבנון</span>
+                </div>
+            </div>
+            
+            <div class="translation-box">
+                <h3>תרגום והסבר</h3>
+                <div class="translation-content">
+                    <p><strong>הקשר:</strong> יותם, הבן היחיד של גדעון שניצל מרצח אחיו, עומד על הר גריזים ומשמיע את משלו כביקורת נוקבת על בחירת אבימלך למלך.</p>
+                    
+                    <p><strong>המשל:</strong> העצים מבקשים מלך. הזית (המסמל שמן קדוש ואור), התאנה (מתיקות ופריון) והגפן (שמחה ויין) מסרבים למלוך - כולם מעדיפים להמשיך בתרומתם הייחודית. רק האטד הקוצני, שאין לו תרומה אמיתית, מקבל את המלוכה ואיים באש אם לא יכבדו אותו.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trees Analysis Interactive Section -->
+    <section id="analysis" class="analysis">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-search"></i>
+                העצים במשל - אנליזה אינטראקטיבית
+            </h2>
+            
+            <div class="trees-interactive">
+                <div class="trees-display">
+                    <div class="tree-card active" data-tree="olive" id="oliveCard">
+                        <div class="tree-icon olive">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>הזית</h3>
+                        <p class="tree-quote">"החדלתי את דשני אשר בי יכבדו אלהים ואנשים"</p>
+                    </div>
+                    
+                    <div class="tree-card" data-tree="fig" id="figCard">
+                        <div class="tree-icon fig">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                        <h3>התאנה</h3>
+                        <p class="tree-quote">"החדלתי את מתקי ואת תנובתי הטובה"</p>
+                    </div>
+                    
+                    <div class="tree-card" data-tree="vine" id="vineCard">
+                        <div class="tree-icon vine">
+                            <i class="fas fa-grape-cluster"></i>
+                        </div>
+                        <h3>הגפן</h3>
+                        <p class="tree-quote">"החדלתי את תירושי המשמח אלהים ואנשים"</p>
+                    </div>
+                    
+                    <div class="tree-card" data-tree="bramble" id="brambleCard">
+                        <div class="tree-icon bramble">
+                            <i class="fas fa-thorn"></i>
+                        </div>
+                        <h3>האטד</h3>
+                        <p class="tree-quote">"בואו חסו בצלי ואם אין תצא אש מן האטד"</p>
+                    </div>
+                </div>
+                
+                <div class="tree-details">
+                    <!-- Olive Details -->
+                    <div class="tree-detail active" id="oliveDetail">
+                        <div class="detail-header">
+                            <div class="detail-icon olive">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div class="detail-title">
+                                <h3>עץ הזית</h3>
+                                <p class="detail-subtitle">סמל הכבוד והקדושה</p>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-content">
+                            <div class="detail-section">
+                                <h4><i class="fas fa-seedling"></i> תכונות בוטניות</h4>
+                                <ul>
+                                    <li>עץ ירוק עד, חי מאות שנים</li>
+                                    <li>מתאים לאקלים ים-תיכוני</li>
+                                    <li>מייצר שמן זית איכותי</li>
+                                    <li>סמל עמידות ויציבות</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="detail-section">
+                                <h4><i class="fas fa-star"></i> סמליות מקראית</h4>
+                                <ul>
+                                    <li>שמן המשחה הקדוש במקדש</li>
+                                    <li>אור המנורה בבית המקדש</li>
+                                    <li>ענף הזית - סמל השלום</li>
+                                    <li>כבוד האדם והאל</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="detail-section">
+                                <h4><i class="fas fa-comment"></i> פרשנויות</h4>
+                                <div class="commentary-grid">
+                                    <div class="commentary-item">
+                                        <strong>חז"ל:</strong> מסמל את עתניאל בן קנז, השופט הראשון
+                                    </div>
+                                    <div class="commentary-item">
+                                        <strong>אברבנאל:</strong> האדם המיוחס והכשר ביותר בקהילה
+                                    </div>
+                                    <div class="commentary-item">
+                                        <strong>מלבי"ם:</strong> החכם המאיר בתורה ובחכמה
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Fig Details -->
+                    <div class="tree-detail" id="figDetail">
+                        <div class="detail-header">
+                            <div class="detail-icon fig">
+                                <i class="fas fa-apple-alt"></i>
+                            </div>
+                            <div class="detail-title">
+                                <h3>עץ התאנה</h3>
+                                <p class="detail-subtitle">סמל המתיקות והפריון</p>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-content">
+                            <div class="detail-section">
+                                <h4><i class="fas fa-seedling"></i> תכונות בוטניות</h4>
+                                <ul>
+                                    <li>עץ פרי מהשבעת המינים</li>
+                                    <li>פרי מתוק ומזין במיוחד</li>
+                                    <li>נותן צל נעים ורחב</li>
+                                    <li>פורח פעמיים בשנה</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="detail-section">
+                                <h4><i class="fas fa-star"></i> סמליות מקראית</h4>
+                                <ul>
+                                    <li>אחד משבעת המינים שנשתבחה בהם הארץ</li>
+                                    <li>סמל השפע והברכה</li>
+                                    <li>"איש תחת גפנו ותחת תאנתו" - שלווה</li>
+                                    <li>פריון ותנובה טובה</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="detail-section">
+                                <h4><i class="fas fa-comment"></i> פרשנויות</h4>
+                                <div class="commentary-grid">
+                                    <div class="commentary-item">
+                                        <strong>חז"ל:</strong> מסמלת את דבורה הנביאה והשופטת
+                                    </div>
+                                    <div class="commentary-item">
+                                        <strong>אברבנאל:</strong> האדם העשיר והמבוסס כלכלית
+                                    </div>
+                                    <div class="commentary-item">
+                                        <strong>מלבי"ם:</strong> בעל הנכסים והעושר שמטיב עם הזולת
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Vine Details -->
+                    <div class="tree-detail" id="vineDetail">
+                        <div class="detail-header">
+                            <div class="detail-icon vine">
+                                <i class="fas fa-grape-cluster"></i>
+                            </div>
+                            <div class="detail-title">
+                                <h3>הגפן</h3>
+                                <p class="detail-subtitle">סמל השמחה והחברות</p>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-content">
+                            <div class="detail-section">
+                                <h4><i class="fas fa-seedling"></i> תכונות בוטניות</h4>
+                                <ul>
+                                    <li>צמח מטפס עם אשכולות ענבים</li>
+                                    <li>מייצר יין מתסיס הענבים</li>
+                                    <li>זקוק לטיפוח ועבודה מסורה</li>
+                                    <li>נותן תמורה גבוהה למשקיע</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="detail-section">
+                                <h4><i class="fas fa-star"></i> סמליות מקראית</h4>
+                                <ul>
+                                    <li>יין לשמח לבב אנוש</li>
+                                    <li>נסכים במקדש וקדושה</li>
+                                    <li>סמל השמחה והחגיגה</li>
+                                    <li>ישראל כגפן נטועה</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="detail-section">
+                                <h4><i class="fas fa-comment"></i> פרשנויות</h4>
+                                <div class="commentary-grid">
+                                    <div class="commentary-item">
+                                        <strong>חז"ל:</strong> מסמלת את גדעון עצמו, אבי יותם
+                                    </div>
+                                    <div class="commentary-item">
+                                        <strong>אברבנאל:</strong> האדם החכם ובעל התושיה
+                                    </div>
+                                    <div class="commentary-item">
+                                        <strong>מלבי"ם:</strong> המנהיג המדיני הטוב והמועיל
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bramble Details -->
+                    <div class="tree-detail" id="brambleDetail">
+                        <div class="detail-header">
+                            <div class="detail-icon bramble">
+                                <i class="fas fa-thorn"></i>
+                            </div>
+                            <div class="detail-title">
+                                <h3>האטד</h3>
+                                <p class="detail-subtitle">הקוץ המאיים</p>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-content">
+                            <div class="detail-section">
+                                <h4><i class="fas fa-seedling"></i> תכונות בוטניות</h4>
+                                <ul>
+                                    <li>שיח קוצני נמוך וחסר פרי</li>
+                                    <li>לא נותן צל ממשי</li>
+                                    <li>מהיר להתלקח ולהצית סביבה</li>
+                                    <li>מפגע יותר מתועלת</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="detail-section">
+                                <h4><i class="fas fa-exclamation-triangle"></i> הסכנה באטד</h4>
+                                <ul>
+                                    <li>מבטיח הגנה שאינו יכול לספק</li>
+                                    <li>מאיים באש ובהרס</li>
+                                    <li>מסמל עריצות ושררה ריקה</li>
+                                    <li>הרס עצמי וחורבן הכלל</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="detail-section">
+                                <h4><i class="fas fa-comment"></i> פרשנויות</h4>
+                                <div class="commentary-grid">
+                                    <div class="commentary-item">
+                                        <strong>כל הפרשנים:</strong> מסמל את אבימלך הרוצח
+                                    </div>
+                                    <div class="commentary-item">
+                                        <strong>אברבנאל:</strong> המנהיג חסר הכישורים שתופס כוח
+                                    </div>
+                                    <div class="commentary-item">
+                                        <strong>מסר כללי:</strong> סכנת המנהיג הרע ושאיפת השלטון
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Infographics Section -->
+    <section id="infographics" class="infographics">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-chart-pie"></i>
+                תרשימים אינטראקטיביים
+            </h2>
+            <p class="section-description">
+                גלה את מימדי המשל הנוספים באמצעות תרשימים אינטראקטיביים המציגים את הקשרי העצים, התפתחות הפרשנות לאורך הדורות ומפת המקומות המקראיים הקשורים למשל.
+            </p>
+            
+            <!-- Tree Visualization -->
+            <div id="tree-visualization" class="visualization-section">
+                <h3>דיאגרמת העצים</h3>
+                <p>לחץ על כל עץ כדי לגלות את מאפייניו הייחודיים ומשמעותו במשל</p>
+                <div class="tree-visualization-container">
+                    <svg id="tree-viz-svg" class="tree-viz-svg"></svg>
+                </div>
+            </div>
+            
+            <!-- Commentary Timeline -->
+            <div id="commentary-timeline" class="visualization-section">
+                <h3>ציר הזמן של הפרשנות</h3>
+                <p>עקוב אחר התפתחות הפרשנות של המשל מחכמינוז"ל ועד פרשנים מודרניים</p>
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    <div id="timeline-periods"></div>
+                </div>
+            </div>
+            
+            <!-- Geography Map -->
+            <div id="geography-map" class="visualization-section">
+                <h3>מפה גיאוגרפית</h3>
+                <p>חקור את המקומות המקראיים הקשורים למשל יותם ולתקופת השופטים</p>
+                <div class="geography-map-container">
+                    <svg id="geography-map-svg" class="geography-map-svg"></svg>
+                </div>
+            </div>
+            
+            <!-- Comparison Charts -->
+            <div id="comparison-charts" class="visualization-section">
+                <h3>תרשימי השוואה</h3>
+                <p>השווה בין העצים השונים, פרשנים והתמות המרכזיות במשל</p>
+                <div class="comparison-charts-container">
+                    <div class="charts-header">
+                        <h3>מבט השוואתי</h3>
+                        <div class="chart-controls">
+                            <button class="chart-btn active" data-chart="trees">עצים</button>
+                            <button class="chart-btn" data-chart="commentators">פרשנים</button>
+                            <button class="chart-btn" data-chart="themes">נושאים</button>
+                        </div>
+                    </div>
+                    <div class="charts-container">
+                        <div id="trees-chart" class="chart-panel active"></div>
+                        <div id="commentators-chart" class="chart-panel"></div>
+                        <div id="themes-chart" class="chart-panel"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commentary Section -->
+    <section id="commentary" class="commentary">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-book-open"></i>
+                פרשנויות קלאסיות
+            </h2>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-period="תלמוד וחז״ל">
+                    <div class="timeline-marker">
+                        <i class="fas fa-scroll"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>חז״ל והמדרש</h3>
+                        <p class="timeline-period">200-500 לספירה</p>
+                        <p>זיהוי העצים עם מנהיגי ישראל ההיסטוריים: הזית - עתניאל בן קנז, התאנה - דבורה הנביאה, הגפן - גדעון.</p>
+                        <blockquote>"כל השופטים הראויים משלו על העם רק כמנהיגי שעה ולא כמלכים"</blockquote>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-period="ימי הביניים">
+                    <div class="timeline-marker">
+                        <i class="fas fa-feather"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>רש״י ובעלי התוספות</h3>
+                        <p class="timeline-period">1000-1200</p>
+                        <p>רש״י מביא את הפרשנות המדרשית במפורש ומוסיף הבהרות לשוניות. מצודות מדגישות שלא כל פרט במשל זקוק להתאמה מדויקת.</p>
+                        <blockquote>"הזית הוא עתניאל, התאנה דבורה, הגפן גדעון"</blockquote>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-period="ימי הביניים המאוחרים">
+                    <div class="timeline-marker">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>רד״ק ומפרשי ספרד</h3>
+                        <p class="timeline-period">1200-1300</p>
+                        <p>רד״ק מציע פרשנות דורית: שלושת העצים מייצגים את שלושת הדורות של משפחת גדעון שהיו יכולים למלוך אך לא רצו.</p>
+                        <blockquote>"הזית, התאנה והגפן - גדעון, בנו ונכדו שכולם סירבו למלוכה"</blockquote>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-period="רנסנס יהודי">
+                    <div class="timeline-marker">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>אברבנאל והגישה הפוליטית</h3>
+                        <p class="timeline-period">1400-1500</p>
+                        <p>אברבנאל, שהיה מדינאי בעצמו, מציע קריאה פוליטית: המשל מבקר את הסדר השגוי בבחירת מנהיגים. העצים מסמלים סוגי מנהיגות ראויה.</p>
+                        <blockquote>"הזית - המיוחס, התאנה - העשיר, הגפן - החכם. כולם נמנעו והאטד השתלט"</blockquote>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-period="עת החדשה">
+                    <div class="timeline-marker">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>מלבי״ם והגישה הסוציולוגית</h3>
+                        <p class="timeline-period">1800-1879</p>
+                        <p>המלבי״ם מציע ניתוח חברתי מתקדם: חלוקת החברה לקבוצות לפי כישרון וערך, והאופן שבו נכשלת בחירת המנהיגות.</p>
+                        <blockquote>"בין בני גדעון היו חכמים כזיתים, עשירים כתאנות, ומדינאים כגפנים - אך האטד השתלט"</blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contemporary Relevance -->
+    <section id="contemporary" class="contemporary">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-newspaper"></i>
+                רלוונטיות עכשווית
+            </h2>
+            
+            <div class="contemporary-grid">
+                <div class="contemporary-card politics">
+                    <div class="card-header">
+                        <i class="fas fa-vote-yea"></i>
+                        <h3>פוליטיקה ודמוקרטיה</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>המשל מזהיר מפני עליית מנהיגים פופוליסטים ודמגוגים. כאשר המנהיגים הטובים נמנעים מהזירה הפוליטית, "האטדים" יכולים להשתלט.</p>
+                        
+                        <div class="example-box">
+                            <h4>דוגמאות מהעולם:</h4>
+                            <ul>
+                                <li>התופעה הפופוליסטית באירופה ובאמריקה</li>
+                                <li>כישלונות דמוקרטיים במדינות מתפתחות</li>
+                                <li>עליית דיקטטורים בוואקום מנהיגותי</li>
+                            </ul>
+                        </div>
+                        
+                        <blockquote class="modern-quote">
+                            "כשהטובים שותקים, הרעים שולטים" - אדמונד ברק
+                        </blockquote>
+                    </div>
+                </div>
+                
+                <div class="contemporary-card business">
+                    <div class="card-header">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>עולם העסקים והארגונים</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>בחברות ובארגונים, העובדים הטובים לעיתים נמנעים מתפקידי ניהול, ואז עולים מנהלים פחות מוכשרים אך שאפתנים יותר.</p>
+                        
+                        <div class="example-box">
+                            <h4>תופעות מוכרות:</h4>
+                            <ul>
+                                <li>עליית מנהלים בעלי אגו גדול וכישורים מעטים</li>
+                                <li>מומחים שמעדיפים לא לעבור לניהול</li>
+                                <li>משברי ניהול בחברות טכנולוגיה</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contemporary-card social">
+                    <div class="card-header">
+                        <i class="fas fa-users"></i>
+                        <h3>רשתות חברתיות ודעת קהל</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>ברשתות החברתיות, האנשים הקולניים והמתגרים זוכים לתשומת לב רבה יותר מהמתונים והמאוזנים.</p>
+                        
+                        <div class="example-box">
+                            <h4>דימויי "אטד" מודרניים:</h4>
+                            <ul>
+                                <li>אינפלואנסרים חסרי תוכן אמיתי</li>
+                                <li>מנהיגי דעה שמפיצים קיטוב</li>
+                                <li>פוליטיקאים שמתבססים על רעש ולא על תוכן</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Current Events Feed -->
+            <div class="current-events">
+                <h3>
+                    <i class="fas fa-rss"></i>
+                    אירועים אקטואליים בהקשר המשל
+                </h3>
+                
+                <div class="events-list">
+                    <div class="event-item">
+                        <div class="event-date">אוגוסט 2025</div>
+                        <div class="event-content">
+                            <h4>משבר מנהיגות במפלגות הישראליות</h4>
+                            <p>מנהיגים ותיקים פורשים מהפוליטיקה, ומתמודדים חדשים ללא ניסיון מנסים למלא את החלל</p>
+                            <span class="event-tag">פוליטיקה ישראלית</span>
+                        </div>
+                    </div>
+                    
+                    <div class="event-item">
+                        <div class="event-date">יולי 2025</div>
+                        <div class="event-content">
+                            <h4>דיון ציבורי: "האם הטובים בוחרים לא להוביל?"</h4>
+                            <p>סקר מראה שאנשי אקדמיה ומקצוע נרתעים מתפקידים ציבוריים בישראל</p>
+                            <span class="event-tag">חברה ישראלית</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="blog.html" class="btn btn-primary">
+                    <i class="fas fa-arrow-left"></i>
+                    קרא עוד בבלוג
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-graduation-cap"></i>
+                לימוד והוראה
+            </h2>
+            
+            <div class="education-tabs">
+                <button class="tab-btn active" data-tab="teachers">למורים</button>
+                <button class="tab-btn" data-tab="students">לתלמידים</button>
+                <button class="tab-btn" data-tab="parents">להורים</button>
+                <button class="tab-btn" data-tab="general">לציבור הרחב</button>
+            </div>
+            
+            <!-- Teachers Tab -->
+            <div class="tab-content active" id="teachersTab">
+                <h3>משאבים לחינוכים ומורים</h3>
+                
+                <div class="education-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h4>מערכי שיעור מוכנים</h4>
+                        <p>מערכי שיעור מפורטים לגילאים שונים, עם מטלות ושאלות לדיון</p>
+                        <ul>
+                            <li>חט"ב (כיתות ז-ט)</li>
+                            <li>תיכון (כיתות י-יב)</li>
+                            <li>מכינות קדם-צבאיות</li>
+                        </ul>
+                        <a href="resources/lesson-plans.html" class="btn btn-sm">הורד מערכי שיעור</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-theater-masks"></i>
+                        </div>
+                        <h4>פעילויות חווייתיות</h4>
+                        <p>רעיונות למחזה, משחקי תפקידים ופעילויות אינטראקטיביות</p>
+                        <ul>
+                            <li>המחזת המשל</li>
+                            <li>דיון פרלמנטרי</li>
+                            <li>סימולציה של בחירות</li>
+                        </ul>
+                        <a href="resources/activities.html" class="btn btn-sm">רעיונות לפעילויות</a>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h4>כלי הערכה</h4>
+                        <p>מבחנים, מטלות בית ורובריקות להערכת הבנה</p>
+                        <ul>
+                            <li>שאלות בחינה</li>
+                            <li>מטלות חקר</li>
+                            <li>פרויקטים יצירתיים</li>
+                        </ul>
+                        <a href="resources/assessment.html" class="btn btn-sm">כלי הערכה</a>
+                    </div>
+                </div>
+                
+                <div class="teaching-tips">
+                    <h4><i class="fas fa-lightbulb"></i> טיפים להוראה</h4>
+                    <div class="tips-grid">
+                        <div class="tip-box">
+                            <h5>התחל בחוויה</h5>
+                            <p>השתמש בהמחזה או במשחק תפקידים כדי להפוך את המשל לחוויה חיה</p>
+                        </div>
+                        <div class="tip-box">
+                            <h5>קשר לאקטואליה</h5>
+                            <p>הבא דוגמאות עכשוויות שיעזרו לתלמידים להבין את הרלוונטיות</p>
+                        </div>
+                        <div class="tip-box">
+                            <h5>עודד דיון</h5>
+                            <p>השאלות הפתוחות חשובות יותר מהתשובות הנכונות</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Students Tab -->
+            <div class="tab-content" id="studentsTab">
+                <h3>לומדים בעצמכם? כאן המקום להתחיל</h3>
+                
+                <div class="learning-path">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>קרא את המשל</h4>
+                            <p>התחל עם הטקסט המקראי המלא והבן את הסיפור הבסיסי</p>
+                            <a href="#biblical-text" class="step-link">לטקסט המלא</a>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>הכר את העצים</h4>
+                            <p>למד על כל עץ במשל ומה הוא מסמל</p>
+                            <a href="#analysis" class="step-link">לאנליזה האינטראקטיבית</a>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>גלה פרשנויות</h4>
+                            <p>קרא מה חכמים לאורך הדורות חשבו על המשל</p>
+                            <a href="#commentary" class="step-link">לפרשנויות</a>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>קשר לימינו</h4>
+                            <p>ראה איך המשל העתיק רלוונטי לעולם המודרני</p>
+                            <a href="#contemporary" class="step-link">לאקטואליה</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="interactive-quiz">
+                    <h4><i class="fas fa-question-circle"></i> בדוק את עצמך</h4>
+                    <p>חידון אינטראקטיבי לבדיקת ההבנה</p>
+                    <button class="btn btn-primary" onclick="startQuiz()">
+                        <i class="fas fa-play"></i>
+                        התחל חידון
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Parents Tab -->
+            <div class="tab-content" id="parentsTab">
+                <h3>מדריך להורים - איך ללמד ערכי מנהיגות</h3>
+                
+                <div class="parent-guides">
+                    <div class="guide-section">
+                        <h4><i class="fas fa-home"></i> שיחות בבית</h4>
+                        <div class="conversation-starters">
+                            <h5>שאלות לפתיחת שיחה:</h5>
+                            <ul>
+                                <li>"מי המנהיג הכי טוב שאתה מכיר? מה עושה אותו טוב?"</li>
+                                <li>"איך אתה חושב שצריך לבחור ראש כיתה?"</li>
+                                <li>"מתי ראית מישהו שלא היה אמור להיות מנהיג אבל הפך לכזה?"</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="guide-section">
+                        <h4><i class="fas fa-book-reader"></i> קריאה משותפת</h4>
+                        <p>רעיונות לקריאת המשל עם הילדים:</p>
+                        <ul>
+                            <li>קרא את המשל בקול רם עם הטעמות</li>
+                            <li>תן לכל ילד "לשחק" עץ אחר</li>
+                            <li>צייר יחד את העצים במשל</li>
+                            <li>המציא יחד המשך למשל</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- General Public Tab -->
+            <div class="tab-content" id="generalTab">
+                <h3>לציבור הרחב - העמקה והרחבה</h3>
+                
+                <div class="public-resources">
+                    <div class="resource-section">
+                        <h4><i class="fas fa-users"></i> קבוצות לימוד</h4>
+                        <p>הצטרף לקבוצות לימוד או הקם קבוצה במקום מגוריך</p>
+                        <a href="study-groups.html" class="btn btn-outline">מצא קבוצת לימוד</a>
+                    </div>
+                    
+                    <div class="resource-section">
+                        <h4><i class="fas fa-calendar-alt"></i> אירועים והרצאות</h4>
+                        <p>השתתף בכנסים, הרצאות וסדנאות על נושאי המשל</p>
+                        <a href="events.html" class="btn btn-outline">לוח אירועים</a>
+                    </div>
+                    
+                    <div class="resource-section">
+                        <h4><i class="fas fa-podcast"></i> פודקסטים וחומרי השמעה</h4>
+                        <p>האזן לדיונים מעמיקים ושיעורים על המשל</p>
+                        <a href="audio.html" class="btn btn-outline">חומרי השמעה</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>משל יותם</h4>
+                    <p>מרכז דיגיטלי לחקר המשל המקראי והשלכותיו העכשוויות</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="פייסבוק"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="טוויטר"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="יוטיוב"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="לינקדאין"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>קישורים מהירים</h4>
+                    <ul class="footer-links">
+                        <li><a href="#biblical-text">המשל המקראי</a></li>
+                        <li><a href="#analysis">פירוש ואנליזה</a></li>
+                        <li><a href="#commentary">פרשנויות קלאסיות</a></li>
+                        <li><a href="#contemporary">אקטואליה</a></li>
+                        <li><a href="#education">לימוד והוראה</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>משאבים</h4>
+                    <ul class="footer-links">
+                        <li><a href="resources.html">חומרי הוראה</a></li>
+                        <li><a href="bibliography.html">ביבליוגרפיה</a></li>
+                        <li><a href="blog.html">בלוג</a></li>
+                        <li><a href="about.html">אודות</a></li>
+                        <li><a href="contact.html">צור קשר</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>הישאר מעודכן</h4>
+                    <p>קבל עדכונים על תכנים חדשים ואירועים</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="כתובת אימייל" required>
+                        <button type="submit">הירשם</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 משל יותם. כל הזכויות שמורות.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">מדיניות פרטיות</a>
+                    <a href="terms.html">תנאי שימוש</a>
+                    <a href="accessibility.html">נגישות</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/audio-player.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/infographics.js"></script>
+    <script src="js/learning-analytics.js"></script>
+    <script>
+        // Initialize infographics when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof YotamInfographics !== 'undefined') {
+                const infographics = new YotamInfographics();
+                infographics.init();
+                
+                // Add navigation link functionality
+                const infographicsLink = document.querySelector('a[href="#infographics"]');
+                if (infographicsLink) {
+                    infographicsLink.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        document.getElementById('infographics').scrollIntoView({ 
+                            behavior: 'smooth' 
+                        });
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html>

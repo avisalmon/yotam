@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>חיפוש מתקדם - משל יותם</title>
+    <meta name="description" content="חיפוש מתקדם באתר משל יותם - מצא מידע מדויק על המשל המקראי, פרשנויות ואקטואליה">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Frank+Ruhl+Libre:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/rtl.css">
+    
+    <!-- Custom Search Page Styles -->
+    <style>
+        .advanced-search-page {
+            min-height: calc(100vh - 200px);
+            padding: 2rem 0;
+            background: linear-gradient(135deg, rgba(218, 165, 32, 0.05), rgba(139, 125, 58, 0.05));
+        }
+        
+        .search-page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            direction: rtl;
+        }
+        
+        .search-page-header h1 {
+            font-size: 2.5rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-family: var(--font-heading);
+        }
+        
+        .search-page-header p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .search-form-container {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow-xl);
+            margin-bottom: 2rem;
+        }
+        
+        .advanced-search-form {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .search-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            align-items: end;
+        }
+        
+        .search-field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .search-field label {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+        
+        .search-field input,
+        .search-field select {
+            padding: 12px 16px;
+            border: 2px solid var(--light-beige);
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: var(--font-primary);
+            transition: border-color 0.3s ease;
+            direction: rtl;
+            text-align: right;
+        }
+        
+        .search-field input:focus,
+        .search-field select:focus {
+            outline: none;
+            border-color: var(--golden-yellow);
+            box-shadow: 0 0 0 3px rgba(218, 165, 32, 0.1);
+        }
+        
+        .search-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        .search-stats {
+            background: var(--light-beige);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .stat-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--golden-yellow);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        .popular-searches {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .popular-searches h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+        
+        .popular-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+        
+        .popular-tag {
+            background: var(--sage-green);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .popular-tag:hover {
+            background: var(--golden-yellow);
+            color: var(--text-primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .search-tips {
+            background: linear-gradient(135deg, var(--sage-green), #7a8471);
+            color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .search-tips h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .tips-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .tips-list li {
+            margin-bottom: 0.8rem;
+            padding-right: 1.5rem;
+            position: relative;
+        }
+        
+        .tips-list li::before {
+            content: "💡";
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .search-page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .search-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .search-actions {
+                flex-direction: column;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-tree nav-icon"></i>
+                <span class="nav-title">משל יותם</span>
+            </div>
+            
+            <!-- Simple Search -->
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="quick-search-input" placeholder="חיפוש מהיר..." 
+                           autocomplete="off" aria-label="חיפוש מהיר">
+                    <button type="button" id="quick-search-button" aria-label="חיפוש">
+                        <span class="search-icon">🔍</span>
+                    </button>
+                </div>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        בית
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#biblical-text" class="nav-link">
+                        <i class="fas fa-scroll"></i>
+                        המשל המקראי
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">
+                        <i class="fas fa-blog"></i>
+                        בלוג
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="resources/lesson-plans.html" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        משאבים חינוכיים
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Advanced Search Page Content -->
+    <main class="advanced-search-page">
+        <div class="container">
+            <!-- Header -->
+            <div class="search-page-header">
+                <h1><i class="fas fa-search-plus"></i> חיפוש מתקדם</h1>
+                <p>מצא במדויק את המידע שאתה מחפש במשל יותם ובכל התכנים החינוכיים באתר</p>
+            </div>
+
+            <!-- Search Statistics -->
+            <div class="search-stats">
+                <h3>בסיס הנתונים שלנו</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">עמודי תוכן</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">25+</span>
+                        <span class="stat-label">פרשנים קלאסיים</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">מאמרי אקטואליה</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">משאבים חינוכיים</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Search Form -->
+            <div class="search-form-container">
+                <form class="advanced-search-form" id="advancedSearchForm">
+                    <!-- Main Search Terms -->
+                    <div class="search-row">
+                        <div class="search-field">
+                            <label for="main-query">מילות מפתח עיקריות</label>
+                            <input type="text" id="main-query" name="main-query" 
+                                   placeholder="למשל: זית, תאנה, מנהיגות...">
+                        </div>
+                        <div class="search-field">
+                            <label for="exact-phrase">ביטוי מדויק</label>
+                            <input type="text" id="exact-phrase" name="exact-phrase" 
+                                   placeholder="למשל: &quot;הלכו העצים למשח&quot;">
+                        </div>
+                    </div>
+
+                    <!-- Categories and Types -->
+                    <div class="search-row">
+                        <div class="search-field">
+                            <label for="category">קטגוריה</label>
+                            <select id="category" name="category">
+                                <option value="all">כל הקטגוריות</option>
+                                <option value="biblical">טקסט מקראי</option>
+                                <option value="commentary">פרשנות קלאסית</option>
+                                <option value="modern">אקטואליה</option>
+                                <option value="education">חינוך</option>
+                                <option value="analysis">ניתוח ופירוש</option>
+                            </select>
+                        </div>
+                        <div class="search-field">
+                            <label for="content-type">סוג התוכן</label>
+                            <select id="content-type" name="content-type">
+                                <option value="all">כל סוגי התוכן</option>
+                                <option value="articles">מאמרים</option>
+                                <option value="lessons">מערכי שיעור</option>
+                                <option value="activities">פעילויות</option>
+                                <option value="commentary">פרשנויות</option>
+                                <option value="multimedia">מולטימדיה</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Advanced Options -->
+                    <div class="search-row">
+                        <div class="search-field">
+                            <label for="exclude-words">מילים לא לכלול</label>
+                            <input type="text" id="exclude-words" name="exclude-words" 
+                                   placeholder="מילים שלא רוצה לראות בתוצאות">
+                        </div>
+                        <div class="search-field">
+                            <label for="author">מחבר / פרשן</label>
+                            <select id="author" name="author">
+                                <option value="all">כל המחברים</option>
+                                <option value="rashi">רש"י</option>
+                                <option value="radak">רד"ק</option>
+                                <option value="abarbanel">אברבנאל</option>
+                                <option value="malbim">מלבי"ם</option>
+                                <option value="modern">פרשנים מודרניים</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Search Actions -->
+                    <div class="search-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-search"></i>
+                            חפש
+                        </button>
+                        <button type="button" class="btn btn-secondary" id="clearForm">
+                            <i class="fas fa-trash"></i>
+                            נקה טופס
+                        </button>
+                        <button type="button" class="btn btn-accent" id="saveSearch">
+                            <i class="fas fa-bookmark"></i>
+                            שמור חיפוש
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Search Results Container -->
+            <div id="advanced-search-results" class="search-results-container hidden">
+                <!-- Results will be populated here -->
+            </div>
+
+            <!-- Popular Searches -->
+            <div class="popular-searches">
+                <h3>חיפושים פופולריים</h3>
+                <div class="popular-tags">
+                    <a href="#" class="popular-tag" data-search="משל יותם">משל יותם</a>
+                    <a href="#" class="popular-tag" data-search="זית תאנה גפן">זית תאנה גפן</a>
+                    <a href="#" class="popular-tag" data-search="אטד קוצני">אטד קוצני</a>
+                    <a href="#" class="popular-tag" data-search="מנהיגות">מנהיגות</a>
+                    <a href="#" class="popular-tag" data-search="רש״י">רש"י</a>
+                    <a href="#" class="popular-tag" data-search="אברבנאל">אברבנאל</a>
+                    <a href="#" class="popular-tag" data-search="דמוקרטיה">דמוקרטיה</a>
+                    <a href="#" class="popular-tag" data-search="פוליטיקה ישראלית">פוליטיקה ישראלית</a>
+                    <a href="#" class="popular-tag" data-search="שופטים">שופטים</a>
+                    <a href="#" class="popular-tag" data-search="גדעון אבימלך">גדעון אבימלך</a>
+                </div>
+            </div>
+
+            <!-- Search Tips -->
+            <div class="search-tips">
+                <h3>טיפים לחיפוש מתקדם</h3>
+                <ul class="tips-list">
+                    <li><strong>שימוש במרכאות:</strong> לחיפוש ביטוי מדויק השתמש במרכאות - למשל "הלכו העצים למשח"</li>
+                    <li><strong>שילוב מילים:</strong> השתמש במספר מילות מפתח כדי לצמצם את התוצאות</li>
+                    <li><strong>חיפוש בעברית ובאנגלית:</strong> תוכל לחפש גם במונחים באנגלית - למשל "leadership" או "Jotham"</li>
+                    <li><strong>שימוש בפילטרים:</strong> השתמש בסינונים כדי למצוא בדיוק את סוג התוכן שמעניין אותך</li>
+                    <li><strong>חיפוש ללא ניקוד:</strong> המערכת תמצא תוצאות גם אם תחפש ללא ניקוד או עם כתיב שונה</li>
+                    <li><strong>מילים נרדفות:</strong> נסה גם מילים נרדفות - למשל "מלך" ו"שליט", "מנהיג" ו"מנהיגות"</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>משל יותם</h4>
+                    <p>מרכז דיגיטלי מקיף לחקר המשל המקראי ורלוונטיותו לימינו</p>
+                </div>
+                <div class="footer-section">
+                    <h4>קישורים</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">עמוד הבית</a></li>
+                        <li><a href="blog.html">בלוג</a></li>
+                        <li><a href="resources/lesson-plans.html">משאבים</a></li>
+                        <li><a href="search.html">חיפוש מתקדם</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>יצירת קשר</h4>
+                    <p>לשאלות, הצעות ומשוב</p>
+                    <p><i class="fas fa-envelope"></i> info@yotam-parable.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 משל יותם. כל הזכויות שמורות.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">מדיניות פרטיות</a>
+                    <a href="terms.html">תנאי שימוש</a>
+                    <a href="accessibility.html">נגישות</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+    <script>
+        // Advanced search page specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const advancedForm = document.getElementById('advancedSearchForm');
+            const clearButton = document.getElementById('clearForm');
+            const saveButton = document.getElementById('saveSearch');
+            const popularTags = document.querySelectorAll('.popular-tag');
+
+            // Handle advanced search form submission
+            advancedForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                performAdvancedSearch();
+            });
+
+            // Clear form
+            clearButton.addEventListener('click', function() {
+                advancedForm.reset();
+                document.getElementById('advanced-search-results').classList.add('hidden');
+            });
+
+            // Save search functionality (placeholder)
+            saveButton.addEventListener('click', function() {
+                const formData = new FormData(advancedForm);
+                const searchParams = Object.fromEntries(formData);
+                localStorage.setItem('saved_search', JSON.stringify(searchParams));
+                alert('חיפוש נשמר בהצלחה!');
+            });
+
+            // Popular tag clicks
+            popularTags.forEach(tag => {
+                tag.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const searchTerm = this.dataset.search;
+                    document.getElementById('main-query').value = searchTerm;
+                    performAdvancedSearch();
+                });
+            });
+
+            // Quick search functionality
+            const quickSearchButton = document.getElementById('quick-search-button');
+            const quickSearchInput = document.getElementById('quick-search-input');
+
+            quickSearchButton.addEventListener('click', function() {
+                const query = quickSearchInput.value.trim();
+                if (query) {
+                    // Redirect to main page with search
+                    window.location.href = `index.html#search=${encodeURIComponent(query)}`;
+                }
+            });
+
+            quickSearchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    quickSearchButton.click();
+                }
+            });
+        });
+
+        function performAdvancedSearch() {
+            const formData = new FormData(document.getElementById('advancedSearchForm'));
+            const searchParams = Object.fromEntries(formData);
+            
+            // Build search query from form data
+            let query = searchParams['main-query'] || '';
+            const exactPhrase = searchParams['exact-phrase'];
+            const excludeWords = searchParams['exclude-words'];
+            const category = searchParams['category'];
+            const contentType = searchParams['content-type'];
+            const author = searchParams['author'];
+
+            // Add exact phrase in quotes
+            if (exactPhrase) {
+                query += ` "${exactPhrase}"`;
+            }
+
+            // Perform search using the global search system
+            if (window.yotamSearch && query.trim()) {
+                const filters = {
+                    category: category !== 'all' ? category : 'all',
+                    type: contentType !== 'all' ? contentType : 'all'
+                };
+
+                const results = window.yotamSearch.search(query.trim(), filters);
+                displayAdvancedSearchResults(results, query, searchParams);
+            }
+        }
+
+        function displayAdvancedSearchResults(results, query, params) {
+            const resultsContainer = document.getElementById('advanced-search-results');
+            resultsContainer.classList.remove('hidden');
+
+            const filtersApplied = Object.values(params).some(value => value && value !== 'all');
+            const filtersText = filtersApplied ? ' (עם פילטרים)' : '';
+
+            if (results.length === 0) {
+                resultsContainer.innerHTML = `
+                    <div class="search-form-container">
+                        <div class="search-no-results">
+                            <h3>לא נמצאו תוצאות עבור "${query}"${filtersText}</h3>
+                            <p>נסה לשנות את הפילטרים או השתמש במילות מפתח אחרות.</p>
+                        </div>
+                    </div>
+                `;
+            } else {
+                const resultsHTML = `
+                    <div class="search-form-container">
+                        <div class="search-results-header">
+                            <h3>נמצאו ${results.length} תוצאות עבור "${query}"${filtersText}</h3>
+                        </div>
+                        <div class="search-results-list">
+                            ${results.map(result => formatSearchResult(result, query)).join('')}
+                        </div>
+                    </div>
+                `;
+                resultsContainer.innerHTML = resultsHTML;
+            }
+
+            // Scroll to results
+            resultsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function formatSearchResult(result, query) {
+            const snippet = createResultSnippet(result, query);
+            const categoryLabel = getCategoryLabel(result.category);
+            
+            return `
+                <div class="search-result-item">
+                    <div class="result-header">
+                        <a href="${result.url}" class="result-title">
+                            ${highlightMatch(result.title, query)}
+                        </a>
+                        <span class="result-category">${categoryLabel}</span>
+                    </div>
+                    <div class="result-snippet">${snippet}</div>
+                    <div class="result-meta">
+                        <span class="result-url">${result.url}</span>
+                        <span class="result-relevance">רלוונטיות: ${Math.round(result.relevance)}%</span>
+                    </div>
+                </div>
+            `;
+        }
+
+        function createResultSnippet(result, query) {
+            const content = result.content || result.searchableText || '';
+            return content.substring(0, 200) + (content.length > 200 ? '...' : '');
+        }
+
+        function highlightMatch(text, query) {
+            // Simple highlighting - in a real implementation this would be more sophisticated
+            if (!query) return text;
+            const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+            return text.replace(regex, '<mark class="search-highlight">$1</mark>');
+        }
+
+        function getCategoryLabel(category) {
+            const labels = {
+                'home': 'עמוד הבית',
+                'biblical': 'טקסט מקראי',
+                'commentary': 'פרשנות',
+                'analysis': 'ניתוח',
+                'modern': 'אקטואליה',
+                'education': 'חינוך',
+                'blog': 'בלוג'
+            };
+            return labels[category] || 'כללי';
+        }
+    </script>
+</body>
+</html>

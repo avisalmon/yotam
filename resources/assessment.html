@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="כלי הערכה למשל יותם - מבחנים, רובריקות וכלים להערכת למידה">
+    <meta name="keywords" content="משל יותם, הערכה, מבחנים, הערכה חלופית, רובריקה">
+    <title>כלי הערכה - משל יותם</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&family=Frank+Ruhl+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/rtl.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="../index.html">
+                    <i class="fas fa-tree nav-icon"></i>
+                    <span class="nav-title">משל יותם</span>
+                </a>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        בית
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../blog.html" class="nav-link">
+                        <i class="fas fa-blog"></i>
+                        בלוג
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active">
+                        <i class="fas fa-book"></i>
+                        משאבים
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="lesson-plans.html">מערכי שיעור</a></li>
+                        <li><a href="activities.html">פעילויות</a></li>
+                        <li><a href="assessment.html" class="active">הערכה</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">כלי הערכה</h1>
+                <p class="hero-subtitle">מגוון כלים להערכת הבנה ולמידה של משל יותם</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">סוגי הערכה</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">40+</span>
+                        <span class="stat-label">שאלות</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">רמות קושי</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Assessment Types -->
+    <section class="assessment-section">
+        <div class="container">
+            <!-- Assessment Categories -->
+            <div class="assessment-tabs">
+                <button class="tab-btn active" data-tab="formative">
+                    <i class="fas fa-clipboard-list"></i>
+                    הערכה מעצבת
+                </button>
+                <button class="tab-btn" data-tab="summative">
+                    <i class="fas fa-certificate"></i>
+                    הערכה מסכמת
+                </button>
+                <button class="tab-btn" data-tab="alternative">
+                    <i class="fas fa-lightbulb"></i>
+                    הערכה חלופית
+                </button>
+                <button class="tab-btn" data-tab="self">
+                    <i class="fas fa-user-check"></i>
+                    הערכה עצמית
+                </button>
+            </div>
+
+            <!-- Formative Assessment -->
+            <div class="tab-content active" id="formative">
+                <div class="section-header">
+                    <h2>הערכה מעצבת</h2>
+                    <p>כלים לבדיקת הבנה בזמן אמת ולהתאמת ההוראה</p>
+                </div>
+                
+                <div class="assessment-grid">
+                    <div class="assessment-card">
+                        <div class="assessment-header">
+                            <div class="assessment-icon">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
+                            <h3>שאלות יציאה מהר</h3>
+                            <div class="difficulty-level easy">קל</div>
+                        </div>
+                        <div class="assessment-content">
+                            <p>5 שאלות קצרות לבדיקת הבנה בסיסית של המשל בסוף כל שיעור.</p>
+                            <div class="sample-questions">
+                                <strong>דוגמאות שאלות:</strong>
+                                <ul>
+                                    <li>איזה עץ סירב ראשון למלוכה?</li>
+                                    <li>מה אמר הזית כשביקשו ממנו למלוך?</li>
+                                    <li>איזה עץ הסכים למלוך על העצים?</li>
+                                </ul>
+                            </div>
+                            <div class="assessment-meta">
+                                <span class="duration"><i class="fas fa-clock"></i> 5 דקות</span>
+                                <span class="questions"><i class="fas fa-list"></i> 5 שאלות</span>
+                            </div>
+                        </div>
+                        <div class="assessment-footer">
+                            <button class="btn btn-primary" onclick="downloadAssessment('exit-tickets')">
+                                <i class="fas fa-download"></i>
+                                הורד כלי הערכה
+                            </button>
+                            <button class="btn btn-secondary" onclick="previewAssessment('exit-tickets')">
+                                <i class="fas fa-eye"></i>
+                                תצוגה מקדימה
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="assessment-card">
+                        <div class="assessment-header">
+                            <div class="assessment-icon">
+                                <i class="fas fa-thumbs-up"></i>
+                            </div>
+                            <h3>כרטיסי אגודל</h3>
+                            <div class="difficulty-level easy">קל</div>
+                        </div>
+                        <div class="assessment-content">
+                            <p>הערכה מהירה באמצעות אותות ידיים להבנת מידת ההבנה של התלמידים.</p>
+                            <div class="sample-questions">
+                                <strong>אופן השימוש:</strong>
+                                <ul>
+                                    <li>אגודל למעלה - הבנתי מצוין</li>
+                                    <li>אגודל לצד - הבנתי חלקית</li>
+                                    <li>אגודל למטה - לא הבנתי</li>
+                                </ul>
+                            </div>
+                            <div class="assessment-meta">
+                                <span class="duration"><i class="fas fa-clock"></i> 1 דקה</span>
+                                <span class="questions"><i class="fas fa-users"></i> כל הכיתה</span>
+                            </div>
+                        </div>
+                        <div class="assessment-footer">
+                            <button class="btn btn-primary" onclick="downloadAssessment('thumb-cards')">
+                                <i class="fas fa-download"></i>
+                                הורד הנחיות
+                            </button>
+                            <button class="btn btn-secondary" onclick="previewAssessment('thumb-cards')">
+                                <i class="fas fa-eye"></i>
+                                תצוגה מקדימה
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="assessment-card">
+                        <div class="assessment-header">
+                            <div class="assessment-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h3>מחשבה-זוגות-שיתוף</h3>
+                            <div class="difficulty-level medium">בינוני</div>
+                        </div>
+                        <div class="assessment-content">
+                            <p>טכניקה לעידוד חשיבה ושיתוף ברמת הכיתה.</p>
+                            <div class="sample-questions">
+                                <strong>שאלות לדיון:</strong>
+                                <ul>
+                                    <li>מדוע הזית לא רצה למלוך?</li>
+                                    <li>האם האטד היה בחירה טובה למנהיג?</li>
+                                    <li>מה הלקח החשוב מהמשל?</li>
+                                </ul>
+                            </div>
+                            <div class="assessment-meta">
+                                <span class="duration"><i class="fas fa-clock"></i> 10 דקות</span>
+                                <span class="questions"><i class="fas fa-comments"></i> דיון זוגי</span>
+                            </div>
+                        </div>
+                        <div class="assessment-footer">
+                            <button class="btn btn-primary" onclick="downloadAssessment('think-pair-share')">
+                                <i class="fas fa-download"></i>
+                                הורד הנחיות
+                            </button>
+                            <button class="btn btn-secondary" onclick="previewAssessment('think-pair-share')">
+                                <i class="fas fa-eye"></i>
+                                תצוגה מקדימה
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Summative Assessment -->
+            <div class="tab-content" id="summative">
+                <div class="section-header">
+                    <h2>הערכה מסכמת</h2>
+                    <p>מבחנים וכלי הערכה לבדיקת השגת יעדי הלמידה</p>
+                </div>
+                
+                <div class="assessment-grid">
+                    <div class="assessment-card">
+                        <div class="assessment-header">
+                            <div class="assessment-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h3>מבחן אמריקאי</h3>
+                            <div class="difficulty-level medium">בינוני</div>
+                        </div>
+                        <div class="assessment-content">
+                            <p>מבחן עם 20 שאלות אמריקאיות הבודקות הבנה, ניתוח ויישום.</p>
+                            <div class="sample-questions">
+                                <strong>תחומי בדיקה:</strong>
+                                <ul>
+                                    <li>הכרת התוכן (40%)</li>
+                                    <li>הבנה ופרשנות (35%)</li>
+                                    <li>יישום ואנליזה (25%)</li>
+                                </ul>
+                            </div>
+                            <div class="assessment-meta">
+                                <span class="duration"><i class="fas fa-clock"></i> 45 דקות</span>
+                                <span class="questions"><i class="fas fa-list"></i> 20 שאלות</span>
+                            </div>
+                        </div>
+                        <div class="assessment-footer">
+                            <button class="btn btn-primary" onclick="downloadAssessment('multiple-choice-test')">
+                                <i class="fas fa-download"></i>
+                                הורד מבחן
+                            </button>
+                            <button class="btn btn-secondary" onclick="previewAssessment('multiple-choice-test')">
+                                <i class="fas fa-eye"></i>
+                                תצוגה מקדימה
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="assessment-card">
+                        <div class="assessment-header">
+                            <div class="assessment-icon">
+                                <i class="fas fa-edit"></i>
+                            </div>
+                            <h3>מבחן שאלות פתוחות</h3>
+                            <div class="difficulty-level hard">קשה</div>
+                        </div>
+                        <div class="assessment-content">
+                            <p>מבחן עם שאלות הדורשות כתיבה מורחבת ולמידה מעמיקה.</p>
+                            <div class="sample-questions">
+                                <strong>דוגמאות שאלות:</strong>
+                                <ul>
+                                    <li>נתח את דמות האטד במשל</li>
+                                    <li>השווה בין שלושת העצים הטובים</li>
+                                    <li>דון ברלוונטיות המשל לימינו</li>
+                                </ul>
+                            </div>
+                            <div class="assessment-meta">
+                                <span class="duration"><i class="fas fa-clock"></i> 60 דקות</span>
+                                <span class="questions"><i class="fas fa-list"></i> 5 שאלות</span>
+                            </div>
+                        </div>
+                        <div class="assessment-footer">
+                            <button class="btn btn-primary" onclick="downloadAssessment('open-questions-test')">
+                                <i class="fas fa-download"></i>
+                                הורד מבחן
+                            </button>
+                            <button class="btn btn-secondary" onclick="previewAssessment('open-questions-test')">
+                                <i class="fas fa-eye"></i>
+                                תצוגה מקדימה
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="assessment-card">
+                        <div class="assessment-header">
+                            <div class="assessment-icon">
+                                <i class="fas fa-puzzle-piece"></i>
+                            </div>
+                            <h3>מבחן משולב</h3>
+                            <div class="difficulty-level medium">בינוני</div>
+                        </div>
+                        <div class="assessment-content">
+                            <p>מבחן המשלב סוגי שאלות שונים: אמריקאי, השלמה, ופתוחות קצרות.</p>
+                            <div class="sample-questions">
+                                <strong>חלוקת השאלות:</strong>
+                                <ul>
+                                    <li>10 שאלות אמריקאיות</li>
+                                    <li>5 שאלות השלמה</li>
+                                    <li>3 שאלות פתוחות קצרות</li>
+                                </ul>
+                            </div>
+                            <div class="assessment-meta">
+                                <span class="duration"><i class="fas fa-clock"></i> 50 דקות</span>
+                                <span class="questions"><i class="fas fa-list"></i> 18 שאלות</span>
+                            </div>
+                        </div>
+                        <div class="assessment-footer">
+                            <button class="btn btn-primary" onclick="downloadAssessment('mixed-test')">
+                                <i class="fas fa-download"></i>
+                                הורד מבחן
+                            </button>
+                            <button class="btn btn-secondary" onclick="previewAssessment('mixed-test')">
+                                <i class="fas fa-eye"></i>
+                                תצוגה מקדימה
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alternative Assessment -->
+            <div class="tab-content" id="alternative">
+                <div class="section-header">
+                    <h2>הערכה חלופית</h2>
+                    <p>דרכי הערכה יצירתיות ומגוונות מעבר למבחן מסורתי</p>
+                </div>
+                
+                <div class="assessment-grid">
+                    <div class="assessment-card">
+                        <div class="assessment-header">
+                            <div class="assessment-icon">
+                                <i class="fas fa-folder-open"></i>
+                            </div>
+                            <h3>תיק עבודות</h3>
+                            <div class="difficulty-level medium">בינוני</div>
+                        </div>
+                        <div class="assessment-content">
+                            <p>איסוף מקיף של עבודות התלמיד לאורך תקופת הלמידה.</p>
+                            <div class="sample-questions">
+                                <strong>תכנים בתיק:</strong>
+                                <ul>
+                                    <li>דפי עבודה ופתרונות</li>
+                                    <li>יצירות אמנותיות</li>
+                                    <li>רפלקציות אישיות</li>
+                                </ul>
+                            </div>
+                            <div class="assessment-meta">
+                                <span class="duration"><i class="fas fa-calendar"></i> לאורך הקורס</span>
+                                <span class="questions"><i class="fas fa-folder"></i> מגוון עבודות</span>
+                            </div>
+                        </div>
+                        <div class="assessment-footer">
+                            <button class="btn btn-primary" onclick="downloadAssessment('portfolio')">
+                                <i class="fas fa-download"></i>
+                                הורד הנחיות
+                            </button>
+                            <button class="btn btn-secondary" onclick="previewAssessment('portfolio')">
+                                <i class="fas fa-eye"></i>
+                                תצוגה מקדימה
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="assessment-card">
+                        <div class="assessment-header">
+                            <div class="assessment-icon">
+                                <i class="fas fa-presentation"></i>
+                            </div>
+                            <h3>מצגת או הרצאה</h3>
+                            <div class="difficulty-level hard">קשה</div>
+                        </div>
+                        <div class="assessment-content">
+                            <p>הכנת מצגת מקצועית והצגתה בפני הכיתה.</p>
+                            <div class="sample-questions">
+                                <strong>נושאים אפשריים:</strong>
+                                <ul>
+                                    <li>ההקשר ההיסטורי של המשל</li>
+                                    <li>השוואה עם משלים אחרים</li>
+                                    <li>יישום עכשווי של המשל</li>
+                                </ul>
+                            </div>
+                            <div class="assessment-meta">
+                                <span class="duration"><i class="fas fa-clock"></i> 10-15 דקות</span>
+                                <span class="questions"><i class="fas fa-users"></i> הצגה בכיתה</span>
+                            </div>
+                        </div>
+                        <div class="assessment-footer">
+                            <button class="btn btn-primary" onclick="downloadAssessment('presentation')">
+                                <i class="fas fa-download"></i>
+                                הורד רוברקה
+                            </button>
+                            <button class="btn btn-secondary" onclick="previewAssessment('presentation')">
+                                <i class="fas fa-eye"></i>
+                                תצוגה מקדימה
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="assessment-card">
+                        <div class="assessment-header">
+                            <div class="assessment-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <h3>פרויקט יצירתי</h3>
+                            <div class="difficulty-level hard">קשה</div>
+                        </div>
+                        <div class="assessment-content">
+                            <p>פרויקט רב-תחומי המשלב אמנות, ספרות וטכנולוגיה.</p>
+                            <div class="sample-questions">
+                                <strong>אפשרויות פרויקט:</strong>
+                                <ul>
+                                    <li>סרטון אנימציה</li>
+                                    <li>מחזה וביצוע</li>
+                                    <li>משחק מחשב פשוט</li>
+                                </ul>
+                            </div>
+                            <div class="assessment-meta">
+                                <span class="duration"><i class="fas fa-calendar"></i> 3 שבועות</span>
+                                <span class="questions"><i class="fas fa-lightbulb"></i> פרויקט אישי</span>
+                            </div>
+                        </div>
+                        <div class="assessment-footer">
+                            <button class="btn btn-primary" onclick="downloadAssessment('creative-project')">
+                                <i class="fas fa-download"></i>
+                                הורד רוברקה
+                            </button>
+                            <button class="btn btn-secondary" onclick="previewAssessment('creative-project')">
+                                <i class="fas fa-eye"></i>
+                                תצוגה מקדימה
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Self Assessment -->
+            <div class="tab-content" id="self">
+                <div class="section-header">
+                    <h2>הערכה עצמית</h2>
+                    <p>כלים לעידוד רפלקציה עצמית ומודעות ללמידה</p>
+                </div>
+                
+                <div class="assessment-grid">
+                    <div class="assessment-card">
+                        <div class="assessment-header">
+                            <div class="assessment-icon">
+                                <i class="fas fa-mirror"></i>
+                            </div>
+                            <h3>רפלקציה אישית</h3>
+                            <div class="difficulty-level easy">קל</div>
+                        </div>
+                        <div class="assessment-content">
+                            <p>שאלון רפלקציה המעודד תלמידים לחשוב על למידתם.</p>
+                            <div class="sample-questions">
+                                <strong>שאלות רפלקציה:</strong>
+                                <ul>
+                                    <li>מה למדתי על עצמי מהמשל?</li>
+                                    <li>איך אני מתייחס למנהיגות?</li>
+                                    <li>מה הייתי עושה במקום העצים?</li>
+                                </ul>
+                            </div>
+                            <div class="assessment-meta">
+                                <span class="duration"><i class="fas fa-clock"></i> 15 דקות</span>
+                                <span class="questions"><i class="fas fa-list"></i> 8 שאלות</span>
+                            </div>
+                        </div>
+                        <div class="assessment-footer">
+                            <button class="btn btn-primary" onclick="downloadAssessment('self-reflection')">
+                                <i class="fas fa-download"></i>
+                                הורד שאלון
+                            </button>
+                            <button class="btn btn-secondary" onclick="previewAssessment('self-reflection')">
+                                <i class="fas fa-eye"></i>
+                                תצוגה מקדימה
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="assessment-card">
+                        <div class="assessment-header">
+                            <div class="assessment-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>מעקב התקדמות</h3>
+                            <div class="difficulty-level medium">בינוני</div>
+                        </div>
+                        <div class="assessment-content">
+                            <p>כלי למעקב עצמי אחר התקדמות בהבנת המשל.</p>
+                            <div class="sample-questions">
+                                <strong>תחומי מעקב:</strong>
+                                <ul>
+                                    <li>הכרת הטקסט</li>
+                                    <li>הבנת המשמעויות</li>
+                                    <li>יישום בחיים</li>
+                                </ul>
+                            </div>
+                            <div class="assessment-meta">
+                                <span class="duration"><i class="fas fa-calendar"></i> שבועי</span>
+                                <span class="questions"><i class="fas fa-chart-bar"></i> גרף התקדמות</span>
+                            </div>
+                        </div>
+                        <div class="assessment-footer">
+                            <button class="btn btn-primary" onclick="downloadAssessment('progress-tracker')">
+                                <i class="fas fa-download"></i>
+                                הורד כלי מעקב
+                            </button>
+                            <button class="btn btn-secondary" onclick="previewAssessment('progress-tracker')">
+                                <i class="fas fa-eye"></i>
+                                תצוגה מקדימה
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="assessment-card">
+                        <div class="assessment-header">
+                            <div class="assessment-icon">
+                                <i class="fas fa-target"></i>
+                            </div>
+                            <h3>הצבת יעדי למידה</h3>
+                            <div class="difficulty-level medium">בינוני</div>
+                        </div>
+                        <div class="assessment-content">
+                            <p>עזרה לתלמידים להציב יעדים אישיים ללמידת המשל.</p>
+                            <div class="sample-questions">
+                                <strong>יעדים לדוגמה:</strong>
+                                <ul>
+                                    <li>להבין את כל הדמויות במשל</li>
+                                    <li>לקשר את המשל לחיי היומיום</li>
+                                    <li>לפתח מנהיגות אחראית</li>
+                                </ul>
+                            </div>
+                            <div class="assessment-meta">
+                                <span class="duration"><i class="fas fa-calendar"></i> תחילת יחידה</span>
+                                <span class="questions"><i class="fas fa-bullseye"></i> יעדים אישיים</span>
+                            </div>
+                        </div>
+                        <div class="assessment-footer">
+                            <button class="btn btn-primary" onclick="downloadAssessment('goal-setting')">
+                                <i class="fas fa-download"></i>
+                                הורד דף יעדים
+                            </button>
+                            <button class="btn btn-secondary" onclick="previewAssessment('goal-setting')">
+                                <i class="fas fa-eye"></i>
+                                תצוגה מקדימה
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rubrics Section -->
+            <div class="rubrics-section">
+                <h2 class="section-title">רובריקות הערכה</h2>
+                <div class="rubrics-grid">
+                    <div class="rubric-card">
+                        <h3><i class="fas fa-clipboard-check"></i> רובריקה כללית למשל יותם</h3>
+                        <p>רובריקה מקיפה להערכת הבנה וידע על המשל</p>
+                        <button class="btn btn-primary" onclick="downloadRubric('general-rubric')">
+                            <i class="fas fa-download"></i>
+                            הורד רובריקה
+                        </button>
+                    </div>
+
+                    <div class="rubric-card">
+                        <h3><i class="fas fa-presentation"></i> רובריקה להצגות</h3>
+                        <p>הערכת מצגות והרצאות על המשל</p>
+                        <button class="btn btn-primary" onclick="downloadRubric('presentation-rubric')">
+                            <i class="fas fa-download"></i>
+                            הורד רובריקה
+                        </button>
+                    </div>
+
+                    <div class="rubric-card">
+                        <h3><i class="fas fa-palette"></i> רובריקה לפרויקטים יצירתיים</h3>
+                        <p>הערכת עבודות אמנות ופרויקטים יצירתיים</p>
+                        <button class="btn btn-primary" onclick="downloadRubric('creative-rubric')">
+                            <i class="fas fa-download"></i>
+                            הורד רובריקה
+                        </button>
+                    </div>
+
+                    <div class="rubric-card">
+                        <h3><i class="fas fa-users"></i> רובריקה לעבודה קבוצתית</h3>
+                        <p>הערכת שיתוף פעולה ותרומה לקבוצה</p>
+                        <button class="btn btn-primary" onclick="downloadRubric('group-work-rubric')">
+                            <i class="fas fa-download"></i>
+                            הורד רובריקה
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-tree"></i>
+                        <h3>משל יותם</h3>
+                    </div>
+                    <p>אתר מקיף על המשל המקראי החשוב ורלוונטיותו לעולם המודרני</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>ניווט מהיר</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">עמוד הבית</a></li>
+                        <li><a href="../index.html#biblical-text">המשל המקראי</a></li>
+                        <li><a href="../index.html#analysis">פירוש ואנליזה</a></li>
+                        <li><a href="../index.html#contemporary">אקטואליה</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>משאבים</h4>
+                    <ul class="footer-links">
+                        <li><a href="lesson-plans.html">מערכי שיעור</a></li>
+                        <li><a href="activities.html">פעילויות</a></li>
+                        <li><a href="assessment.html" class="active">כלי הערכה</a></li>
+                        <li><a href="../blog.html">בלוג</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 משל יותם. כל הזכויות שמורות.</p>
+                <div class="footer-bottom-links">
+                    <a href="../privacy.html">מדיניות פרטיות</a>
+                    <a href="../terms.html">תנאי שימוש</a>
+                    <a href="../accessibility.html">נגישות</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script>
+        // Tab functionality
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active from all buttons and content
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active to clicked button and corresponding content
+                this.classList.add('active');
+                const tab = this.dataset.tab;
+                document.getElementById(tab).classList.add('active');
+            });
+        });
+
+        // Download functions
+        function downloadAssessment(assessmentId) {
+            alert(`מתחיל הורדה של כלי הערכה: ${assessmentId}\n\nשים לב: זוהי דמונסטרציה - קובץ אמיתי יהיה זמין בגרסה המלאה.`);
+        }
+
+        function previewAssessment(assessmentId) {
+            alert(`פותח תצוגה מקדימה של: ${assessmentId}\n\nשים לב: זוהי דמונסטרציה - תצוגה מקדימה מלאה תהיה זמינה בגרסה המלאה.`);
+        }
+
+        function downloadRubric(rubricId) {
+            alert(`מתחיל הורדה של רובריקה: ${rubricId}\n\nשים לב: זוהי דמונסטרציה - קובץ אמיתי יהיה זמין בגרסה המלאה.`);
+        }
+
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.assessment-card, .rubric-card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+    </script>
+</body>
+</html>

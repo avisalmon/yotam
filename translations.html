@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="השוואת תרגומים למשל יותם - גרסאות בעברית, אנגלית, ארמית וגרסאות מסורתיות">
+    <meta name="keywords" content="תרגומי מקרא, משל יותם, השוואת תרגומים, עברית, אנגלית, ארמית">
+    
+    <title>השוואת תרגומים - משל יותם</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&family=Frank+Ruhl+Libre:wght@400;500;700&family=Noto+Sans:wght@300;400;500;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/rtl.css">
+    <link rel="stylesheet" href="styles/translations.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-tree nav-icon"></i>
+                <span class="nav-title">משל יותם</span>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        בית
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="multimedia.html" class="nav-link">
+                        <i class="fas fa-photo-video"></i>
+                        גלריה מולטימדיה
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="translations.html" class="nav-link active">
+                        <i class="fas fa-language"></i>
+                        השוואת תרגומים
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="search.html" class="nav-link">
+                        <i class="fas fa-search-plus"></i>
+                        חיפוש מתקדם
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="translations-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">השוואת תרגומים</h1>
+                <p class="hero-subtitle">משל יותם בגרסאות שונות - מהמקור העברי ועד לתרגומים מודרניים</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">תרגומים</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">שפות</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">פסוקים</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">מסורות</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Translation Controls -->
+    <section class="translation-controls">
+        <div class="container">
+            <div class="control-panel">
+                <div class="language-selector">
+                    <h3>בחר תרגומים להשוואה:</h3>
+                    <div class="language-grid">
+                        <label class="language-option">
+                            <input type="checkbox" value="hebrew-masoretic" checked>
+                            <div class="language-card">
+                                <i class="fas fa-scroll"></i>
+                                <span class="language-name">עברית מסורתית</span>
+                                <span class="language-desc">הטקסט המסורתי</span>
+                            </div>
+                        </label>
+                        
+                        <label class="language-option">
+                            <input type="checkbox" value="hebrew-modern" checked>
+                            <div class="language-card">
+                                <i class="fas fa-book"></i>
+                                <span class="language-name">עברית מודרנית</span>
+                                <span class="language-desc">תרגום עדכני</span>
+                            </div>
+                        </label>
+                        
+                        <label class="language-option">
+                            <input type="checkbox" value="english-kjv">
+                            <div class="language-card">
+                                <i class="fas fa-church"></i>
+                                <span class="language-name">English (KJV)</span>
+                                <span class="language-desc">King James Version</span>
+                            </div>
+                        </label>
+                        
+                        <label class="language-option">
+                            <input type="checkbox" value="english-niv">
+                            <div class="language-card">
+                                <i class="fas fa-book-open"></i>
+                                <span class="language-name">English (NIV)</span>
+                                <span class="language-desc">New International</span>
+                            </div>
+                        </label>
+                        
+                        <label class="language-option">
+                            <input type="checkbox" value="aramaic-targum">
+                            <div class="language-card">
+                                <i class="fas fa-synagogue"></i>
+                                <span class="language-name">ארמית (תרגום)</span>
+                                <span class="language-desc">תרגום אונקלוס</span>
+                            </div>
+                        </label>
+                        
+                        <label class="language-option">
+                            <input type="checkbox" value="arabic-saadia">
+                            <div class="language-card">
+                                <i class="fas fa-moon"></i>
+                                <span class="language-name">عربي (سعدية)</span>
+                                <span class="language-desc">תרגום סעדיה גאון</span>
+                            </div>
+                        </label>
+                        
+                        <label class="language-option">
+                            <input type="checkbox" value="greek-lxx">
+                            <div class="language-card">
+                                <i class="fas fa-columns"></i>
+                                <span class="language-name">Greek (LXX)</span>
+                                <span class="language-desc">Septuagint</span>
+                            </div>
+                        </label>
+                        
+                        <label class="language-option">
+                            <input type="checkbox" value="latin-vulgate">
+                            <div class="language-card">
+                                <i class="fas fa-cross"></i>
+                                <span class="language-name">Latin (Vulgate)</span>
+                                <span class="language-desc">Jerome's Translation</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="view-options">
+                    <div class="view-mode">
+                        <label>תצוגה:</label>
+                        <button class="view-btn active" data-view="parallel" title="תצוגה מקבילה">
+                            <i class="fas fa-columns"></i>
+                            מקבילה
+                        </button>
+                        <button class="view-btn" data-view="interlinear" title="תצוגה בין השורות">
+                            <i class="fas fa-align-justify"></i>
+                            בין השורות
+                        </button>
+                        <button class="view-btn" data-view="verse-by-verse" title="פסוק אחר פסוק">
+                            <i class="fas fa-list"></i>
+                            פסוק אחר פסוק
+                        </button>
+                    </div>
+                    
+                    <div class="text-options">
+                        <label>
+                            <input type="checkbox" id="show-vowels" checked>
+                            <span>הצג ניקוד</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" id="show-cantillation">
+                            <span>הצג טעמים</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" id="highlight-differences" checked>
+                            <span>הדגש הבדלים</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Translation Comparison -->
+    <section class="translation-comparison">
+        <div class="container">
+            <div class="verse-navigation">
+                <div class="verse-selector">
+                    <button class="nav-btn prev-verse" id="prevVerse">
+                        <i class="fas fa-chevron-right"></i>
+                        פסוק קודם
+                    </button>
+                    
+                    <div class="verse-info">
+                        <span class="current-verse" id="currentVerse">שופטים ט', ח</span>
+                        <div class="verse-dropdown">
+                            <select id="verseSelect">
+                                <option value="9:7">ט', ז - פתיחה</option>
+                                <option value="9:8" selected>ט', ח - העצים הלכו</option>
+                                <option value="9:9">ט', ט - הזית</option>
+                                <option value="9:10">ט', י - התאנה</option>
+                                <option value="9:11">ט', יא - תשובת התאנה</option>
+                                <option value="9:12">ט', יב - הגפן</option>
+                                <option value="9:13">ט', יג - תשובת הגפן</option>
+                                <option value="9:14">ט', יד - האטד</option>
+                                <option value="9:15">ט', טו - תשובת האטד</option>
+                                <option value="9:16">ט', טז - יותם מסביר</option>
+                                <option value="9:17">ט', יז - זכרון העבר</option>
+                                <option value="9:18">ט', יח - האשמה</option>
+                                <option value="9:19">ט', יט - ברכה מותנית</option>
+                                <option value="9:20">ט', כ - קללה מותנית</option>
+                                <option value="9:21">ט', כא - בריחה</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button class="nav-btn next-verse" id="nextVerse">
+                        פסוק הבא
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="comparison-container" id="comparisonContainer">
+                <!-- Translation cards will be dynamically loaded here -->
+            </div>
+            
+            <div class="analysis-panel" id="analysisPanel">
+                <div class="analysis-header">
+                    <h3>
+                        <i class="fas fa-microscope"></i>
+                        ניתוח השוואתי
+                    </h3>
+                    <button class="panel-toggle" onclick="translationSystem.toggleAnalysisPanel()">
+                        <i class="fas fa-chevron-up"></i>
+                    </button>
+                </div>
+                
+                <div class="analysis-content" id="analysisContent">
+                    <!-- Analysis content will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Translation Notes -->
+    <section class="translation-notes">
+        <div class="container">
+            <div class="notes-grid">
+                <div class="note-card">
+                    <div class="note-header">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>הערות תרגום</h3>
+                    </div>
+                    <div class="note-content" id="translationNotes">
+                        <!-- Notes will be loaded dynamically -->
+                    </div>
+                </div>
+                
+                <div class="note-card">
+                    <div class="note-header">
+                        <i class="fas fa-history"></i>
+                        <h3>רקע היסטורי</h3>
+                    </div>
+                    <div class="note-content" id="historicalContext">
+                        <!-- Historical context will be loaded dynamically -->
+                    </div>
+                </div>
+                
+                <div class="note-card">
+                    <div class="note-header">
+                        <i class="fas fa-language"></i>
+                        <h3>הבדלים לשוניים</h3>
+                    </div>
+                    <div class="note-content" id="linguisticDifferences">
+                        <!-- Linguistic differences will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Export & Tools -->
+    <section class="export-tools">
+        <div class="container">
+            <div class="tools-panel">
+                <h3>כלים וייצוא</h3>
+                
+                <div class="tool-buttons">
+                    <button class="tool-btn" onclick="translationSystem.exportComparison('pdf')">
+                        <i class="fas fa-file-pdf"></i>
+                        ייצא ל-PDF
+                    </button>
+                    
+                    <button class="tool-btn" onclick="translationSystem.exportComparison('docx')">
+                        <i class="fas fa-file-word"></i>
+                        ייצא ל-Word
+                    </button>
+                    
+                    <button class="tool-btn" onclick="translationSystem.exportComparison('csv')">
+                        <i class="fas fa-file-csv"></i>
+                        ייצא ל-CSV
+                    </button>
+                    
+                    <button class="tool-btn" onclick="translationSystem.printComparison()">
+                        <i class="fas fa-print"></i>
+                        הדפס
+                    </button>
+                    
+                    <button class="tool-btn" onclick="translationSystem.shareComparison()">
+                        <i class="fas fa-share"></i>
+                        שתף
+                    </button>
+                    
+                    <button class="tool-btn" onclick="translationSystem.saveBookmark()">
+                        <i class="fas fa-bookmark"></i>
+                        שמור סימניה
+                    </button>
+                </div>
+                
+                <div class="quick-comparisons">
+                    <h4>השוואות מוכנות:</h4>
+                    <div class="comparison-presets">
+                        <button class="preset-btn" data-preset="classic">
+                            עברית מסורתית + KJV
+                        </button>
+                        <button class="preset-btn" data-preset="modern">
+                            עברית מודרנית + NIV
+                        </button>
+                        <button class="preset-btn" data-preset="scholarly">
+                            מסורתית + ארמית + יוונית
+                        </button>
+                        <button class="preset-btn" data-preset="multilingual">
+                            עברית + אנגלית + ערבית
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>משל יותם</h3>
+                    <p>חקר מעמיק של המשל המקראי החשוב</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>קישורים מהירים</h4>
+                    <ul>
+                        <li><a href="index.html">דף הבית</a></li>
+                        <li><a href="multimedia.html">גלריה מולטימדיה</a></li>
+                        <li><a href="search.html">חיפוש מתקדם</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>תרגומים</h4>
+                    <ul>
+                        <li><a href="#" onclick="translationSystem.loadPreset('classic')">השוואה קלאסית</a></li>
+                        <li><a href="#" onclick="translationSystem.loadPreset('modern')">השוואה מודרנית</a></li>
+                        <li><a href="#" onclick="translationSystem.loadPreset('scholarly')">השוואה אקדמית</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 משל יותם. כל הזכויות שמורות.</p>
+                <div class="footer-links">
+                    <a href="#privacy">מדיניות פרטיות</a>
+                    <a href="#terms">תנאי שימוש</a>
+                    <a href="#contact">צור קשר</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/translations.js"></script>
+</body>
+</html>
